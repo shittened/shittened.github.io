@@ -5,265 +5,98 @@
 	</head>
 	<body>
 		<div>
-			<div class = "avatar">
-				<img src = "res/avatar.png">
-			</div>
 			<div class = "name">
 				<h1>Kiefciman</h1>
 			</div>
-			<div class = "namebackground"></div>
-			<div class = "instagram">
-				<h2><a href = "https://www.instagram.com/kiefciman/">Instagram</a></h2>
-			</div>
-			<div class = "instabackground"></div>
-			<div class = "github">
-				<h2><a href = "https://github.com/Kiefciman">Github</a></h2>
-			</div>
-			<div class = "githubbackground"></div>
-			<div class = "itch">
-				<h2><a href = "https://kiefciman.itch.io/">Itch.io</a></h2>
-			</div>
-			<div class = "itchbackground"></div>
-			<div class = "mal">
-				<h2><a href = "https://myanimelist.net/profile/Kiefciman">MyAnimeList</a></h2>
-			</div>
-			<div class = "malbackground"></div>
-			<div class = "cloudbase"></div>
-			<div class = "cloud1"></div>
-			<div class = "cloud2"></div>
-			<div class = "cloud3"></div>
-			<div class = "cloud4"></div>
-			<div class = "cloud5"></div>
-			<div class = "sun"></div>
-			<div class = "sunshine1"></div>
-			<div class = "sunshine2"></div>
-			<div class = "sunshine3"></div>
-			<div class = "sunshine4"></div>
-			<div class = "palmbase"></div>
-			<div class = "branch1"></div>
-			<div class = "branch2"></div>
-			<div class = "branch3"></div>
-			<div class = "branch4"></div>
-			<div class = "branch5"></div>
+            <ul>
+                <li><h2><a href = "https://www.instagram.com/kiefciman/">Instagram</a></h2></li>
+                <li><h2><a href = "https://github.com/Kiefciman">Github</a></h2></li>
+                <li><h2><a href = "https://kiefciman.itch.io/">Itch.io</a></h2></li>
+                <li><h2><a href = "https://myanimelist.net/profile/Kiefciman"> MyAnimeList </a></h2></li>
+            </ul>
+            <div class = "namebackground"></div>
+            <div class = "video-background">
+                <video autoplay loop muted plays-inline class = "video-background">
+                    <source src = "res/video.mp4" type = "video/mp4">
+                </video>
+            </div>
 		</div>
 	</body>
 	<style>
 		body {
 			background: #7aa2f7;
 			display: flex;
-			align-items: top;
+			align-items: center;
 			justify-content: center;
 			text-align: center;
+            flex-direction: column;
 		}
-		img {
-			max-width: 30%;
-			max-height: 30%;
-			border: 10px solid #f7768e;
-			border-radius: 20px;
-		}
-		a {
-			color: #292c3c;
-			text-decoration: none;
-		}
-		.avatar {
-			position: relative;
-			top: 100px;
-			left: 0px;
-		}
-		.name {
-			position: relative;
-			top: 120px;
-			left: 155px;
-			font-weight: bold;
-			width: 35%;
-			height: 70px;
-			color: #303446;
-		}
-		.instagram {
-			position: relative;
-			top: 65px;
-			color: black;
-		}
-		.github {
-			position: relative;
-			top: 15px;
-		}
-		.itch {
-                        position: relative;
-                        top: -35px;
-                }
-		.mal {
-                        position: relative;
-                        top: -85px;
-                }
-		.namebackground {
-                        background: #9aa5ce;
-                        position: relative;
-                        top: 40px;
-                        left: 150px;
-                        width: 170px;
-                        height: 55px;
-                        z-index: -1;
-                        border-radius: 20px;
-                        border: 4px solid #a6d189;
-                }
-		.instabackground {
-			background: #babbf1;
-			position: relative;
-			top: 10px;
-			left: 150px;
-			width: 170px;
-			height: 40px;
-			z-index: -1;
-			border-radius: 40px;
-			border: 4px solid #e5c890;
-		}
-		.githubbackground {
-                        background: #babbf1;
-                        position: relative;
-                        top: -40px;
-                        left: 150px;
-                        width: 170px;
-                        height: 40px;
-                        z-index: -1;
-                        border-radius: 40px;
-                        border: 4px solid #e5c890;
-                }
-		.itchbackground {
-                        background: #babbf1;
-                        position: relative;
-                        top: -90px;
-                        left: 150px;
-                        width: 170px;
-                        height: 40px;
-                        z-index: -1;
-                        border-radius: 40px;
-                        border: 4px solid #e5c890;
-                }
-		.malbackground {
-                        background: #babbf1;
-                        position: relative;
-                        top: -140px;
-                        left: 150px;
-                        width: 170px;
-                        height: 40px;
-                        z-index: -1;
-                        border-radius: 40px;
-                        border: 4px solid #e5c890;
-                }
-		.cloudbase {
-			background: #eff1f5;
-			position: relative;
-			width: 350px;
-			height: 20px;
-			left: -20px;
-			top: -600px;
-			z-index: -10;
-			border-radius: 50px;
-		}
-		.cloud1 {
-			background: #eff1f5;
-			position: relative;
-			border-radius: 50%;
-			width: 80px;
-			height: 70px;
-			z-index: -9;
-			top: -670px;
-			left: -50px;
-		}
-		.cloud2 {
-                        background: #eff1f5;
-                        position: relative;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 70px;
-                        z-index: -9;
-                        top: -740px;
-                        left: 270px;
-                }
-		.cloud3 {
-                        background: #eff1f5;
-                        position: relative;
-                        border-radius: 50%;
-                        width: 150px;
-                        height: 120px;
-                        z-index: -9;
-                        top: -860px;
-                        left: 5px;
-		}
-		.cloud4 {
-                        background: #eff1f5;
-                        position: relative;
-                        border-radius: 50%;
-                        width: 150px;
-                        height: 120px;
-                        z-index: -9;
-                        top: -980px;
-                        left: 140px;
-		}
-		.cloud5 {
-                        background: #eff1f5;
-                        position: relative;
-                        border-radius: 50%;
-                        width: 130px;
-                        height: 130px;
-                        z-index: -9;
-                        top: -1120px;
-                        left: 80px;
-		}
-		.sun {
-			z-index: -7;
-			background: #e5c890;
-			position: relative;
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-			top: -1280px;
-			left:420px;
-			border: 10px solid #7aa2f7;
-		}
-		.sunshine1 {
-			z-index: -8;
-			background: #eed49f;
-			position: relative;
-			width: 350px;
-			height: 10px;
-			top: -1340px;
-			left: 300px;
-			border-radius: 30px;
-		}
-		.sunshine2 {
-                        z-index: -8;
-                        background: #eed49f;
-                        position: relative;
-                        width: 350px;
-                        height: 10px;
-                        top: -1350px;
-                        left: 300px;
-                        border-radius: 30px;
-			transform: rotate(90deg);
-                }
-		.sunshine3 {
-                        z-index: -8;
-                        background: #eed49f;
-                        position: relative;
-                        width: 350px;
-                        height: 10px;
-                        top: -1350px;
-                        left: 300px;
-                        border-radius: 30px;
-                        transform: rotate(45deg);
-                }
-		.sunshine4 {
-                        z-index: -8;
-                        background: #eed49f;
-                        position: relative;
-                        width: 350px;
-                        height: 10px;
-                        top: -1370px;
-                        left: 300px;
-                        border-radius: 30px;
-                        transform: rotate(135deg);
-                }
+	    a {
+		    color: #ccd0da;
+		    text-decoration: none;
+	    }
+        ul {
+            display: inline;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+            flex-direction: column;
+            position: absolute;
+            top: 8em;
+            left: 40%;
+            font-family: Source Code Pro;
+            font-weight: bold;
+            font-size: 16 px;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        ul > li {
+            background-color: #1e66f530;
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            margin: 1em 0;
+            padding: 0 0.5em;
+            border: 4px solid #ccd0da
+        }
+	    .name {
+		    position: absolute;
+		    top: 1.5em;
+            left: 42%;
+            height: 10%;
+		    font-weight: bold;
+		    color: #ccd0da;
+            font-size: 20px;
+            font-family: Source Code Pro;
+	    }
+     .namebackground {
+         position: absolute;
+         z-index: -1;
+         background-color: #8839ef50;
+         backdrop-filter: blur(10px);
+         border: 5px solid #ccd0da;
+         top: 2.5em;
+         left: 39.25%;
+         height: 80px;
+         width: 280px;
+         border-radius: 20px;
+     }
+        .video-background {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+        }
+        @media (min-aspect-ratio: 16/9) {
+            .video-background {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-background {
+                width: auto;
+                height: 100%;
+            }
+        }
 	</style>
 </html>
