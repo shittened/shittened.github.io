@@ -1,102 +1,250 @@
-<!doctotype html>
 <html>
-	<head>
-		<title>Kiefciman</title>
-	</head>
-	<body>
-		<div>
-			<div class = "name">
-				<h1>Kiefciman</h1>
-			</div>
-            <ul>
-                <li><h2><a href = "https://www.instagram.com/kiefciman/">Instagram</a></h2></li>
-                <li><h2><a href = "https://github.com/Kiefciman">Github</a></h2></li>
-                <li><h2><a href = "https://kiefciman.itch.io/">Itch.io</a></h2></li>
-                <li><h2><a href = "https://myanimelist.net/profile/Kiefciman"> MyAnimeList </a></h2></li>
-            </ul>
-            <div class = "namebackground"></div>
-            <div class = "video-background">
-                <video autoplay loop muted plays-inline class = "video-background">
-                    <source src = "res/video.mp4" type = "video/mp4">
-                </video>
-            </div>
-		</div>
-	</body>
-	<style>
-		body {
-			background: #7aa2f7;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-            flex-direction: column;
-		}
-	    a {
-		    color: #ccd0da;
-		    text-decoration: none;
-	    }
-        ul {
-            display: inline;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-            flex-direction: column;
-            position: absolute;
-            top: 9.5em;
-            left: 29%;
-            font-family: Source Code Pro;
-            font-weight: bold;
-            font-size: 35px;
-            list-style: none;
-            box-sizing: border-box;
-        }
-        ul > li {
-            background-color: #1e66f530;
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            margin: 1em 0;
-            padding: 0 0.5em;
-            border: 4px solid #ccd0da
-        }
-	    .name {
-		    position: absolute;
-		    top: 1.5em;
-            left: 28%;
-            height: 10%;
-		    font-weight: bold;
-		    color: #ccd0da;
-            font-size: 50px;
-            font-family: Source Code Pro;
-	    }
-     .namebackground {
-         position: absolute;
-         z-index: -1;
-         background-color: #8839ef50;
-         backdrop-filter: blur(10px);
-         border: 5px solid #ccd0da;
-         top: 7em;
-         left: 17.5%;
-         height: 180px;
-         width: 650px;
-         border-radius: 70px;
+    <head>
+        <title>Kiefciman</title>
+    </head>
+    <body>
+        <div class="title">
+            <b><pre>
+ _  ___       __      _
+| |/ (_) ___ / _| ___(_)_ __ ___   __ _ _ __
+| ' /| |/ _ | |_ / __| | '_ ` _ \ / _` | '_ \
+| . \| |  __|  _| (__| | | | | | | (_| | | | |
+|_|\_|_|\___|_|  \___|_|_| |_| |_|\__,_|_| |_|
+
+-------------------------------------------------------------
+            </pre></b>
+        </div>
+        <div class="about">
+            Indie game developer, gamer and tech enthusiast<br>Arch btw
+        </div>
+        <div class="level">Level:</div>
+        <div class="levelnumber">20</div>
+        <div class="sep">
+            <b><pre>
+-------------------------------------------------------------
+            </pre></b>
+        </div>
+        <div class="Links">* Links</div>
+        <ul>
+            <li><h2><a href = "https://www.instagram.com/kiefciman/">&nbsp;Instagram</a></h2></li>
+            <li><h2><a href = "https://github.com/Kiefciman">&nbsp;Github</a></h2></li>
+            <li><h2><a href = "https://kiefciman.itch.io/">&nbsp;Itch.io</a></h2></li>
+            <li><h2><a href = "https://myanimelist.net/profile/Kiefciman">&nbsp;MyAnimeList&nbsp; </a></h2></li>
+        </ul>
+        <div class="sep2">
+            <b><pre>
+-------------------------------------------------------------
+            </pre></b>
+        </div>
+        <div class="current">* Current projects</div>
+        <div class="cowwyjumpimg">
+            <img src="https://img.itch.zone/aW1nLzcyNTE0NTYucG5n/315x250%23c/KhMkz4.png" width=250px>
+        </div>
+        <div class="cowwyjump"><a href ="https://github.com/Kiefciman/Cowwy-jump">&nbspCowwy Jump&nbsp</a></div>
+        <div class="sep3">
+            <b><pre>
+-------------------------------------------------------------
+            </pre></b>
+        </div>
+        <div class="games">* Games</div>
+        <div class="froggylunchimg">
+            <img src="https://img.itch.zone/aW1nLzM1MzMwNDgucG5n/315x250%23c/Ph7VKo.png" width=250px>
+        </div>
+        <div class="froggylunch"><a href="https://kiefciman.itch.io/froggy-lunch">&nbspFroggy Lunch&nbsp</a></div>
+        <div class="mineimg">
+            <img src="https://img.itch.zone/aW1nLzYyNjIxNzYucG5n/315x250%23c/Qg6i8n.png" width=250px>
+        </div>
+        <div class="mine"><a href="https://kiefciman.itch.io/mine">&nbspMine&nbsp</a></div>
+    </body>
+
+    <style>
+     @font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
+
+     body {
+         background: #11111b;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
      }
-        .video-background {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -2;
-        }
-        @media (min-aspect-ratio: 16/9) {
-            .video-background {
-                width: 100%;
-                height: auto;
-            }
-        }
-        @media (max-aspect-ratio: 16/9) {
-            .video-background {
-                width: auto;
-                height: 100%;
-            }
-        }
-	</style>
+
+     .title {
+         font-family: S;
+         font-size: 15;
+         color: #F8BD96;
+         font-weight: bold;
+         position: relative;
+         top: -5px;
+     }
+
+     .about {
+         font-family: S;
+         font-size: 15;
+         font-weight: bold;
+         color: #7aa2f7;
+         position: relative;
+         top: -30px;
+         left: -50px;
+
+     }
+
+     .level {
+         font-family: S;
+         font-size: 15;
+         font-weight: bold;
+         color: #ABE9B3;
+         position: relative;
+         top: -24px;
+         left: -240px;
+     }
+
+     .levelnumber {
+         font-family: S;
+         font-size: 15.5;
+         font-weight: bold;
+         color: #F28FAD;
+         position: relative;
+         top: -45px;
+         left: -190px;
+         width: 25px;
+         padding-left: 5px;
+         border: 1px solid #FAE3B0;
+         border-radius: 10px;
+     }
+
+     .sep {
+         font-family: S;
+         font-size: 15;
+         color: #F8BD96;
+         font-weight: bold;
+         position: relative;
+         top: -45px;
+     }
+
+     .links {
+         font-family: S;
+         font-size: 23;
+         font-weight: bold;
+         color: #F28FAD;
+         position: relative;
+         top: -70px;
+         left: -220px;
+     }
+
+     ul {
+         display: inline;
+         position: relative;
+         top: -85px;
+         left: -215px;
+         font-family: S;
+         font-size: 11px;
+         font-weight: bold;
+         list-style: none;
+         padding-left: -20px;
+     }
+
+     ul > li {
+         background: #7aa2f7;
+     }
+
+     a {
+         text-decoration: none;
+         color: #1A1823;
+     }
+
+     .sep2 {
+         font-family: S;
+         font-size: 15;
+         color: #F8BD96;
+         font-weight: bold;
+         position: relative;
+         top: -105px;
+     }
+
+     .current {
+         font-family: S;
+         font-size: 23;
+         font-weight: bold;
+         color: #F28FAD;
+         position: relative;
+         top: -130px;
+         left: -145px;
+     }
+
+     .cowwyjumpimg {
+         position: relative;
+         top: -120px;
+         left: -145px;
+         border-radius: 55px;
+         border: 3px solid #F8BD96;
+     }
+
+     .cowwyjump {
+         position: relative;
+         font-family: S;
+         font-weight: bold;
+         background: #7aa2f7;
+         top: -110px;
+         left: -145px;
+     }
+
+     img {
+         border-radius: 50px;
+     }
+
+     .sep3 {
+         font-family: S;
+         font-size: 15;
+         color: #F8BD96;
+         font-weight: bold;
+         position: relative;
+         top: -105px;
+     }
+
+     .games {
+         font-family: S;
+         font-size: 23;
+         font-weight: bold;
+         color: #F28FAD;
+         position: relative;
+         top: -130px;
+         left: -220px;
+     }
+
+     .froggylunchimg {
+         position: relative;
+         top: -120px;
+         left: -140px;
+         border-radius: 55px;
+         border: 3px solid #F8BD96;
+     }
+
+
+     .froggylunch {
+         position: relative;
+         font-family: S;
+         font-weight: bold;
+         background: #7aa2f7;
+         top: -110px;
+         left: -140px;
+     }
+
+     .mineimg {
+         position: relative;
+         top: -345px;
+         left: 145px;
+         border-radius: 55px;
+         border: 3px solid #F8BD96;
+     }
+
+     .mine {
+         position: relative;
+         font-family: S;
+         font-weight: bold;
+         background: #7aa2f7;
+         top: -335px;
+         left: 145px;
+     }
+
+    </style>
 </html>
