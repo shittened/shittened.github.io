@@ -4,5 +4,108 @@
 		<title>Myanimestats</title>
 	</head>
 	<body>
+		<div>
+			<div class "header">
+				<h2>[kiefciman ~]|||||||||||||</h2>
+			</div>
+			<div class = "myanimestats">
+				<h3>Myanimestats</h3>
+				Inspired by <a href = "https://myanimelist.net/">MyAnimeList</a>, Myanimestats is a cli tool that helps you organize your anime.<br>
+				You can edit the metadata of animes such as its state (watching/completed/dropped/on hold/plan to watch), seasons, episodes, progress.<br>
+				Myanimestats uses a txt file (animes.txt) as an anime database, but you don't need to edit this file, because the script takes care off adding new anime or editing existing ones.
+			</div>
+			<div class = "github">
+				<h3>Get it on <a href = "https://github.com/Kiefciman/myanimestats">Github</a></h3>
+			</div>
+			<div class = "ss">
+				<img src = "myanimestats.gif" width = 100%;>
+			</div>
+			<div class = "instructions">
+				<h3>To run the tool</h3>
+				Run the "<b>myanimestats.sh</b>" script
+			</div>
+			<div class = "code">./myanimestats.sh</div>
+			<div class = "instructions">
+				Also you can use the <b>-s</b> flag to only show your stats
+			</div>
+			<div class = "code">./myanimelist.sh -s</div>
+			<div class = "firsttime">
+				<h3>Running first time</h3>
+				When you run the script the first time, you will go through a short and simple profile setup process.<br>
+				Then you need to run the script again to actually use it.
+			</div>
+		</div>
 	</body>
+	<style>
+@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
+		
+		body {
+			background: #11111b;
+			margin-top: 20px;;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+
+		h3 {
+			font-family: S;
+			font-weight: bold;
+			color: #7aa2f7;
+			display: block;
+			font-size: 50px;
+			margin-bottom: -5px;
+		}
+
+		h2 {
+			color: #F8BD96;
+			font-family: S;
+			font-weight: bold;
+			display: block;
+			font-size: 50px;
+		}
+
+		.myanimestats {
+			color: #a09bb0;
+			font-family: S;
+			font-size: 20px;
+		}
+		
+		.instructions {
+			color: #a09bb0;
+			font-family: S;
+			font-size: 20px;
+		}
+
+		.firsttime {
+			color: #a09bb0;
+			font-family: S;
+			font-size: 20px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #F28FAD;
+		}
+
+		.ss {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+		}
+
+		.code {
+			color: #ABE9B3;
+			font-family: S;
+			font-weight: bold;
+			font-size: 20px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	</style>
 </html>
