@@ -8,8 +8,8 @@
 			<div class "header">
 				<h2>[kiefciman ~]|||||||||||||</h2>
 			</div>
-			<div class = "close">
-				<a href = "https://kiefciman.github.io/Website/"><b>x</b></a>
+			<div class = "close", onclick = home()>
+				<b>x</b>
 			</div>
 			<div class = "myanimestats">
 				<h3>Myanimestats</h3>
@@ -39,6 +39,11 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		function home() {
+			window.location = "https://kiefciman.github.io/Website/";
+		}
+	</script>
 	<style>
 		@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
 
@@ -151,14 +156,6 @@
 		.close:hover {
 			color: #11111b;
 			background: #cdd6f4;
-		}
-
-		.close a {
-			color: #cdd6f4;
-		}
-
-		.close:hover a {
-			color: #11111b;
 		}
 
 	</style>
