@@ -8,6 +8,9 @@
 			<div class "header">
 				<h2>[kiefciman ~]|||||||||||||</h2>
 			</div>
+			<div class = "close">
+				<a href = "https://kiefciman.github.io/Website/"><b>x</b></a>
+			</div>
 			<div class = "myanimestats">
 				<h3>Myanimestats</h3>
 				Inspired by <a href = "https://myanimelist.net/">MyAnimeList</a>, Myanimestats is a cli tool that helps you organize your anime.<br>
@@ -18,7 +21,7 @@
 				<h3>Get it on <a href = "https://github.com/Kiefciman/myanimestats">Github</a></h3>
 			</div>
 			<div class = "ss">
-				<img src = "myanimestats.gif" width = 100%;>
+				<img src = "myanimestats.gif" width = 99%;>
 			</div>
 			<div class = "instructions">
 				<h3>To run the tool</h3>
@@ -41,9 +44,23 @@
 
 		@media screen and (orientation: landscape) {
 			html {
-				/*transform: scale(.4);*/
-				zoom: 45%;
+				margin-left: 10%;
+				margin-right: 10%;
 			}
+		}
+
+		@media screen and (orientation: portrait) {
+			html {
+			zoom: 150%;
+			}
+
+			.close {
+				display:none
+			}
+		}
+
+		*, ::before, ::after {
+			box-sizing: border-box;
 		}
 		
 		body {
@@ -57,6 +74,10 @@
 			align-items: center;
 			justify-content: flex-start;
 			flex-wrap: wrap;
+			border: 4px solid #cdd6f4;
+			padding-left: 10px;
+			padding-righ: 10px;
+			padding-bottom: 20px;
 		}
 
 		h3 {
@@ -64,7 +85,7 @@
 			font-weight: bold;
 			color: #7aa2f7;
 			display: block;
-			font-size: 50px;
+			font-size: 25px;
 			margin-bottom: -5px;
 		}
 
@@ -73,25 +94,26 @@
 			font-family: S;
 			font-weight: bold;
 			display: block;
-			font-size: 50px;
+			font-size: 25px;
 		}
 
 		.myanimestats {
 			color: #a09bb0;
 			font-family: S;
-			font-size: 40px;
+			font-size: 20px;
+			padding-top: 10px;
 		}
 		
 		.instructions {
 			color: #a09bb0;
 			font-family: S;
-			font-size: 40px;
+			font-size: 20px;
 		}
 
 		.firsttime {
 			color: #a09bb0;
 			font-family: S;
-			font-size: 40px;
+			font-size: 20px;
 		}
 
 		a {
@@ -110,9 +132,34 @@
 			color: #ABE9B3;
 			font-family: S;
 			font-weight: bold;
-			font-size: 40px;
+			font-size: 20px;
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
+
+		.close {
+			font-family: S;
+			font-size: 18px;
+			color: #cdd6f4;
+			margin-left: 96.7%;
+			margin-right: -4px;
+			border: 3px solid #cdd6f4;
+			text-align: center;
+			margin-top: -78px;
+		}
+
+		.close:hover {
+			color: #11111b;
+			background: #cdd6f4;
+		}
+
+		.close a {
+			color: #cdd6f4;
+		}
+
+		.close:hover a {
+			color: #11111b;
+		}
+
 	</style>
 </html>

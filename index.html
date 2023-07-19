@@ -1,15 +1,6 @@
 <!doctotype html>
 <html>
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167999979-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'G-18Y63GFV4Q');
-		</script>
 		<title>
 			Kiefciman
 		</title>
@@ -19,14 +10,18 @@
 			<div class = "header">
 				<h2>[kiefciman ~]|||||||||||||</h2><br>
 			</div>
+			<div class = "close", onclick = error()>
+				<b>x</b>
+			</div>
 			<div class = "duck">
-				<img src = "duck.gif" width = 300px;>
+				<img src = "duck.gif" width = 150px;>
 			</div>
 			<div class = "intro">
 				<h3>Kiefciman's website</h3>
+			</div>
+			<div class = "about">
 				lvl 21<br>
-				Indie hobbyist developer, game developer,weeb, gamer and tech enthuziast.<br>
-				Here you can find random stuff about me, my projects, linux ricing and random topics.
+				<i>Thinking hurts, choose airhead</i><br>
 			</div>
 			<div class = "links">
 				<h3>Links</h3>
@@ -37,35 +32,56 @@
 					<li><a href = "https://www.reddit.com/user/Kiefciman">Reddit</a></li>
 				</ul>
 			</div>
-			<div class = "blogs">
-				<h3>Blogs</h3>
+			<div class = "projects">
+				<h3>Projects</h3>
 				<ul>
 					<li><a href = "myanimestats.html">Myanimestats</a></li>
 				</ul
 			</div>
 		</div>
 	</body>
+	<script>
+		function error() {
+			alert("There is no escape")
+		}
+	</script>
 	<style>
 		@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
-
+		
 		@media screen and (orientation: landscape) {
 			html {
-			/*transform: scale(.4);*/
-			zoom: 45%;
+				margin-left: 10%;
+				margin-right: 10%;
 			}
+		}
+
+		@media screen and (orientation: portrait) {
+			html {
+			zoom: 150%;
+			}
+
+			.close {
+				display:none
+			}
+		}
+
+		*, ::before, ::after {
+			box-sizing: border-box;
 		}
 		
 		body {
 			background: #11111b;
-			margin-top: 20px;;
-			margin-left: 20px;
-			margin-right: 20px;
+			margin-top: 20px;
 			margin-bottom: 20px;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			align-items: left;
 			justify-content: flex-start;
 			flex-wrap: wrap;
+			border: 4px solid #cdd6f4;
+			padding-left: 10px;
+			padding-righ: 10px;
+			padding-bottom: 20px;
 		}
 
 		h3 {
@@ -73,7 +89,7 @@
 			font-weight: bold;
 			color: #7aa2f7;
 			display: block;
-			font-size: 50px;
+			font-size: 25px;
 			margin-bottom: -5px;
 		}
 
@@ -82,21 +98,32 @@
 			font-family: S;
 			font-weight: bold;
 			display: block;
-			font-size: 50px;
+			font-size: 25px;
+		}
+
+		.header {
+			margin-bottom: -10px;
 		}
 
 		.intro {
 			color: #a09bb0;
 			font-family: S;
-			font-size: 40px;
+			font-size: 20px;
+			margin-top: -20px;
 		}
 		
+		.about {
+			color: #a09bb0;
+			font-family: S;
+			font-size: 20px;
+			margin-top: 5px;
+		}
 		ul {
 			font-family: S;
-			font-size: 40px;
+			font-size: 20px;
 			color: #a09bb0;
 			list-style: square;
-			margin-top: -5px;
+			margin-top: 5px;
 			margin-bottom: -10px;
 		}
 
@@ -112,6 +139,28 @@
 		.duck {
 			display: block;
 			margin-left: 40px;
+			margin-top: 40px;
 		}
+
+		.close {
+			font-family: S;
+			font-size: 18px;
+			color: #cdd6f4;
+			margin-left: 96.7%;
+			margin-right: -4px;
+			border: 3px solid #cdd6f4;
+			text-align: center;
+			margin-top: -96px;
+		}
+
+		.close:hover {
+			color: #11111b;
+			background: #cdd6f4;
+		}
+
+		.close:target {
+			color: #ffffff;
+		}
+
 	</style>
 </html>
