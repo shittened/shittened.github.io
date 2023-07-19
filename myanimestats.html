@@ -24,6 +24,34 @@
 				<img src = "myanimestats.gif" width = 99%;>
 			</div>
 			<div class = "instructions">
+				<h3>How to install</h3>
+				<ul><li><b>Linux:</b></li></ul>
+				Dependencies: fzf git<br><br>
+				<b>- Debian/Ubuntu based distros:</b>
+				<div class = "code">sudo apt install fzf git</div>
+				<b>- Suse/Fedora based distros:</b>
+				<div class = "code">sudo dnf install fzf git</div>
+				<b>- Arch based distros:</b>
+				<div class = "code">sudo pacman -S fzf git</div>
+				<br>Then clone this repo:
+				<div class = "code">git clone https://github.com/Kiefciman/myanimestats.git</div><br>
+				<ul><li><b>Windows:</b></li></ul>
+				Dependencies: bash fzf git<br>
+				We are going with scoop<br><br>
+				First install scoop:
+				<div class = "code">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser<br>
+					irm get.scoop.sh | iex
+				</div>
+				Then we install fzf and git (this will also install bash):
+				<div class = "code">scoop install git<br>
+					scoop update<br>
+					scoop install fzf<br>
+				</div>
+				Then open the Bash shell by typing bash or set bash as a terminal profile (at the path simply type bash)<br>
+				Then clone this repo:
+				<div class = "code">git clone https://github.com/Kiefciman/myanimestats.git</div><br>
+				<ul><li><b>Android:</b></li></ul>
+				Not tested yet
 				<h3>To run the tool</h3>
 				Run the "<b>myanimestats.sh</b>" script
 			</div>
@@ -100,6 +128,20 @@
 			font-weight: bold;
 			display: block;
 			font-size: 25px;
+		}
+
+		ul {
+			font-family: S;
+			font-size: 20px;
+			color: #a09bb0;
+			list-style: square;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-left: -20px;
+		}
+
+		li {
+			color: #F28FAD;
 		}
 
 		.myanimestats {
