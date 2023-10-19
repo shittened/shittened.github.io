@@ -2,158 +2,41 @@
 <html>
 	<head>
 		<title>Cowwy-revolt</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	<body>
-		<div class = "header">
-				<h2>[kiefciman ~]|||||||||||||</h2><br>
-			</div>
-			<div class = "close", onclick = home()>
-				<b>x</b>
-			</div>
-			<div class = "cow">
-				<img src = "assets/cowwy-revolt/cow.gif" width = 400px;>
-			</div>
-			<div class = "intro">
-				<h3>Cowwy</h3>
-				An ai pet cow revolt bot<br>
-				<a href = "https://app.revolt.chat/bot/01H4GSCBC2JD67QP0B4X5YPSGC" target="_blank">Invite my bot here!</a>
-				<img src = "assets/cowwy-revolt/help.jpg" width = 98%;>
-			</div>
-			<div class = "features">
-				<h3>Features</h3>
-				<ul><li>Say something to cow (AI)</li></ul>
-				<img src = "assets/cowwy-revolt/moo-talk.jpg" width = 98%;>
-				<ul><li>Talk to an actual smart cow (AI)</li></ul>
-				<img src = "assets/cowwy-revolt/smort.jpg" width = 98%;>
-				<ul><li>Make cow paint something (AI)</li></ul>
-				<img src = "assets/cowwy-revolt/moopng.jpg" width = 98%;>
-				<ul><li>Take care of cow</li></ul>
-				<img src = "assets/cowwy-revolt/hug.jpg" width = 98%;>
-				<ul><li>Ask cow the weather</li></ul>
-				<img src = "assets/cowwy-revolt/wttr.jpg" width = 98%px;>
-				<ul><li>Ask cow how dumb you are</li></ul>
-				<img src = "assets/cowwy-revolt/dumb.jpg" width = 98%;>
-				<ul><li>Manage todo list with cow</li></ul>
-				<img src = "assets/cowwy-revolt/todo.jpg" width = 98%;>
-				<ul><li>Make cow meow in excitement</li></ul>
-				<img src = "assets/cowwy-revolt/meow.jpg" width = 98%;>
-			</div>
+		<div class = "title">
+			<md-block>
+# [kiefciman ~]|||||||||||||
+			</md-block>
+		</div>
+		<div class = "content">
+			<md-block>
+![](assets/cowwy-revolt/cow.gif)
+## Cowwy
+An ai pet cow revolt bot
+
+
+![](assets/cowwy-revolt/help.jpg)
+## Features
+- Say something to cow (AI)
+![](assets/cowwy-revolt/moo-talk.jpg)
+- Talk to an actual smart cow (AI)
+![](assets/cowwy-revolt/smort.jpg)
+- Make cow paint something (AI)
+![](assets/cowwy-revolt/moopng.jpg)
+- Take care of cow
+![](assets/cowwy-revolt/hug.jpg)
+- Ask cow the weather
+![](assets/cowwy-revolt/wttr.jpg)
+- Ask cow how dumb you are
+![](assets/cowwy-revolt/dumb.jpg)
+- Manage todo list with cow
+![](assets/cowwy-revolt/todo.jpg)
+- Make cow meow in excitement
+![](assets/cowwy-revolt/meow.jpg)
+			</md-block>
+		</div>
 	</body>
-	<script>
-		function home() {
-			window.location = "https://kiefciman.github.io";
-		}
-	</script>
-	<style>
-		@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
-		
-		@media screen and (orientation: landscape) {
-			html {
-				margin-left: 20%;
-				margin-right: 20%;
-			}
-		}
-
-		@media screen and (orientation: portrait) {
-			html {
-			}
-
-			.close {
-				display:none
-			}
-		}
-
-		*, ::before, ::after {
-			box-sizing: border-box;
-		}
-		
-		body {
-			background: #11111b;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			display: flex;
-			flex-direction: column;
-			align-items: left;
-			justify-content: flex-start;
-			flex-wrap: wrap;
-			border: 4px solid #cdd6f4;
-			padding-left: 10px;
-			padding-righ: 10px;
-			padding-bottom: 20px;
-		}
-
-		h3 {
-			font-family: S;
-			font-weight: bold;
-			color: #7aa2f7;
-			display: block;
-			font-size: 25px;
-			margin-bottom: -5px;
-		}
-		h2 {
-			color: #F8BD96;
-			font-family: S;
-			font-weight: bold;
-			display: block;
-			font-size: 25px;
-		}
-
-		.header {
-			margin-bottom: -10px;
-		}
-
-		.intro {
-			color: #a09bb0;
-			font-family: S;
-			font-size: 20px;
-			margin-top: -20px;
-		}
-
-		.close {
-			font-family: S;
-			font-size: 18px;
-			color: #cdd6f4;
-			margin-left: 96.7%;
-			margin-right: -4px;
-			border: 3px solid #cdd6f4;
-			text-align: center;
-			margin-top: -85px;
-		}
-
-		.close:hover {
-			color: #11111b;
-			background: #cdd6f4;
-		}
-
-		.close:target {
-			color: #ffffff;
-		}
-
-		ul {
-			font-family: S;
-			font-size: 20px;
-			color: #a09bb0;
-			list-style: square;
-			margin-top: 5px;
-			margin-bottom: -10px;
-			color: #F28FAD;
-		}
-
-		img {
-			padding-top: 15px;
-			padding-bottom: 20px;
-			padding-left: 1%;
-		}
-
-		a {
-			color: #F28FAD;
-			text-decoration: none;
-		}
-
-		a:hover {
-			color: #11111b;
-			background: #F28FAD;
-		}
-
-	</style>
+	<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </html>

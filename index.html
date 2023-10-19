@@ -4,171 +4,33 @@
 		<title>
 			Kiefciman
 		</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	<body>
-		<div>
-			<div class = "header">
-				<h2>[kiefciman ~]|||||||||||||</h2><br>
-			</div>
-			<div class = "close", onclick = error()>
-				<b>x</b>
-			</div>
-			<div class = "duck">
-				<img src = "duck.gif" width = 150px;>
-			</div>
-			<div class = "intro">
-				<h3>Kiefciman's website</h3>
-			</div>
-			<div class = "about">
-				lvl 21<br>
-				<i>Thinking hurts, choose airhead</i><br>
-			</div>
-			<div class = "links">
-				<h3>Links</h3>
-				<ul>
-					<li><a href = "https://github.com/Kiefciman" target="_blank">Github</a></li>
-					<li><a href = "https://www.instagram.com/kiefciman/" target="_blank">Instagram</a></li>
-					<li><a href = "https://kiefciman.itch.io/" target="_blank">Itch.io</a></li>
-					<li><a href = "https://www.reddit.com/user/Kiefciman" target="_blank">Reddit</a></li>
-				</ul>
-			</div>
-			<div class = "projects">
-				<h3>Projects</h3>
-				<ul>
-					<li><a href = "mymangastats.html">Mymangastats</a></li>
-					<li><a href = "myanimestats.html">Myanimestats</a></li>
-					<li><a href = "cowwy-revolt.html">Cowwy revolt bot</a></li>
-				</ul
-			</div>
+		<div class = "title">
+			<md-block>
+# [kiefciman ~]|||||||||||||
+			</md-block>
 		</div>
+		<div class = "content">
+			<md-block>
+![](duck.gif)
+## Kiefciman's website
+lvl 22
+
+Thinking hurts, choose airhead
+## Links
+- [Github](https://github.com/Kiefciman)
+- [Instagram](https://www.instagram.com/kiefciman/)
+- [Itch.io](https://kiefciman.itch.io/)
+- [Reddit](https://www.reddit.com/user/Kiefciman)
+## Projects
+- [Mymangastats](mymangastats.html)
+- [Myanimestats](myanimestats.html)
+- [Cowwy revolt/discord bot](cowwy-revolt.html) _(discontinued)_
+## Blogs
+- [Farting](farting.html)
+		</md-block>
 	</body>
-	<script>
-		function error() {
-			alert("There is no escape")
-		}
-	</script>
-	<style>
-		@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
-		
-		@media screen and (orientation: landscape) {
-			html {
-				margin-left: 10%;
-				margin-right: 10%;
-			}
-		}
-
-		@media screen and (orientation: portrait) {
-			html {
-			zoom: 150%;
-			}
-
-			.close {
-				display:none
-			}
-		}
-
-		*, ::before, ::after {
-			box-sizing: border-box;
-		}
-		
-		body {
-			background: #11111b;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			display: flex;
-			flex-direction: column;
-			align-items: left;
-			justify-content: flex-start;
-			flex-wrap: wrap;
-			border: 4px solid #cdd6f4;
-			padding-left: 10px;
-			padding-righ: 10px;
-			padding-bottom: 20px;
-		}
-
-		h3 {
-			font-family: S;
-			font-weight: bold;
-			color: #7aa2f7;
-			display: block;
-			font-size: 25px;
-			margin-bottom: -5px;
-		}
-
-		h2 {
-			color: #F8BD96;
-			font-family: S;
-			font-weight: bold;
-			display: block;
-			font-size: 25px;
-		}
-
-		.header {
-			margin-bottom: -10px;
-		}
-
-		.intro {
-			color: #a09bb0;
-			font-family: S;
-			font-size: 20px;
-			margin-top: -20px;
-		}
-		
-		.about {
-			color: #a09bb0;
-			font-family: S;
-			font-size: 20px;
-			margin-top: 5px;
-		}
-
-		ul {
-			font-family: S;
-			font-size: 20px;
-			color: #a09bb0;
-			list-style: square;
-			margin-top: 5px;
-			margin-bottom: -10px;
-		}
-
-		a {
-			text-decoration: none;
-			color: #F28FAD;
-		}
-
-		a:hover {
-			color: #11111b;
-			background: #F28FAD;
-		}
-
-		.links {
-			padding: -10px;
-		}
-
-		.duck {
-			display: block;
-			margin-left: 40px;
-			margin-top: 40px;
-		}
-
-		.close {
-			font-family: S;
-			font-size: 18px;
-			color: #cdd6f4;
-			margin-left: 96.7%;
-			margin-right: -4px;
-			border: 3px solid #cdd6f4;
-			text-align: center;
-			margin-top: -96px;
-		}
-
-		.close:hover {
-			color: #11111b;
-			background: #cdd6f4;
-		}
-
-		.close:target {
-			color: #ffffff;
-		}
-
-	</style>
+	<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </html>
