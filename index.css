@@ -5,6 +5,9 @@
 		margin-left: 10%;
 		margin-right: 10%;
 	}
+	.content {
+		overflow-y: auto;
+	}
 }
 
 @media screen and (orientation: portrait) {
@@ -66,10 +69,6 @@ a {
 a:hover {
 	color: #11111b;
 	background: #F28FAD;
-}
-
-.content {
-	overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
