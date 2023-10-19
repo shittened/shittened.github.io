@@ -9,11 +9,6 @@
 
 @media screen and (orientation: portrait) {
 	html {
-	zoom: 150%;
-	}
-
-	.close {
-		display:none
 	}
 }
 
