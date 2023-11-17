@@ -17,6 +17,7 @@
 
 @media screen and (orientation: portrait) {
 	html {
+		zoom: 90%;
 	}
 
 	img {
