@@ -2,9 +2,10 @@ var start_menu = document.getElementById('start-menu');
 var time = document.getElementById('time');
 var win = document.getElementById('window');
 var start_menu_hidden = true;
-var await_open_win = false;
 
 start_menu.style.visibility = 'hidden';
+
+document.cookie = "win_to_open=none; path=/"
 
 function ToggleStart() {
     if (start_menu_hidden) {
@@ -33,17 +34,11 @@ function RefreshTime() {
 
 setInterval(RefreshTime, 1000);
 
-//start_menu.contentWindow.document.getElementById("farting").addEventListener("click", ToggleStart(), false);
-
-function Fart() {
-    await_open_win = true;
-    console.log(await_open_win);
-}
-
-function CheckAwaitOpenWin() {
-    if (await_open_win) {
-        console.log(await_open_win);
+function AwaitOpenWin() {
+    var win_to_open = document.cookie.split('=')[1]
+    if (win_to_open != 'none') {
+        console.log(win_to_open)
     }
 }
 
-setInterval(CheckAwaitOpenWin, 1000);
+setInterval(AwaitOpenWin, 100);
