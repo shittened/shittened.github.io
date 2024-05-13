@@ -1,39 +1,18 @@
 <!doctotype html>
 <html>
-	<head>
-		<title>
-			Kiefciman
-		</title>
-		<link rel="stylesheet" type="text/css" href="index.css">
-	</head>
-	<body>
-		<div class = "title">
-            <h1>[kiefciman ~]|||||||||||||</h1>
-		</div>
-		<div class = "content">
-            <img src = "duck.gif" class = "duck">
-            <h2>Kiefciman's website</h2>
-            Thinking hurts, choose airhead
-            <h2>Links<h2>
-            <ul>
-                <li><a href = "https://github.com/Kiefciman">Github</a></li>
-                <li><a href = "https://kiefciman.itch.io/">Itch.io</a></li>
-                <li><a href = "https://www.reddit.com/user/Kiefciman">Reddit</a></li>
-                <li><a href = "https://kiefciman.github.io/myanimestats/">My anime stats</a></li>
-                <li><a href = "https://kiefciman.github.io/mymangastats/">My manga stats</a></li>
-            </ul>
-            <h2>Projects</h2>
-            <ul>
-                <li>Nekochat <i>(discontinued)</i></li>
-                <li><a href = "https://kiefciman.github.io/Nekofying/">Nekofying (turn into a catgirl NOW)(html/js)</a></li>
-                <li><a href = "https://github.com/Kiefciman/mymangastats">Mymangastats (manga tracker)(bash)</a></li>
-                <li><a href = "https://github.com/Kiefciman/myanimestats">Myanimestats (anime tracker)(bash)</a></li>
-                <li>Cowwy (revolt/discord bot)(python) <i>(discontinued)</i></li>
-            </ul>
-            <h2>Blogs</h2>
-            <ul>
-                <li><a href = "farting.html">Farting</a> <i>updated 19.10.2023</i></li>
-            </ul>
-		</div>
-	</body>
+    <head>
+        <title>Neko OS</title>
+		<link rel = "stylesheet" type = "text/css" href = "index.css">
+    </head>
+    <body>
+        <div class = "taskbar">
+            <button id = "start-button" type = "button" onclick = "ToggleStart()">Neko OS</button>
+            <div class = "opened_apps"></div>
+            <div id = "time"></div>
+        </div>
+        <iframe id = "start-menu" src = "src/start-menu.html" height = 500 width = 300></iframe>
+        <iframe id = "background" src = "src/background.html"></iframe>
+        <iframe id = "window"></iframe>
+    </body>
+    <script src = "index.js"></script>
 </html>
