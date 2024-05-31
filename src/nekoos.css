@@ -1,0 +1,61 @@
+@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
+
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    flex-direction:column-reverse;
+    font-family: S;
+}
+
+#start-menu {
+    position: absolute;
+    left: 14px;
+    bottom: 44px;
+    border: 4px solid #cdd6f4;
+    box-shadow: 0 0 0 4px #1e1e2e;
+    border-radius: 20px;
+}
+
+.taskbar {
+    width: 100vw;
+    height: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: #313244;
+}
+
+#start-button {
+    height: 30px;
+    width: 90px;
+    border-radius: 0px;
+    border-width: 0px;
+    font-weight: bold;
+    background: #7aa2f7;
+}
+
+.opened_apps {
+    height: 30px;
+    width: calc(100vw - 30px - 100px);
+}
+
+#time {
+    background: #7aa2f7;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: calc(100vh - 30px);
+    width: 100vw;
+    overflow: hidden;
+    z-index: -2;
+}
