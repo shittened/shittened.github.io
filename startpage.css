@@ -25,14 +25,14 @@ body {
     color: var(--dark);
 }
 
-body:hover {
-    }
-
-.quote {
+h1 {
     border-top: 3px dotted var(--lavender);
     border-bottom: 3px dotted var(--lavender);
     padding-left: 5px;
     padding-right: 5px;
+    margin: 0px;
+    font-size: 22px;
+    font-weight: normal;
 }
 
 ul {
@@ -52,17 +52,19 @@ li {
     background: var(--yellow);
     border: 10px solid var(--yellow);
     width: 100%;
+    overflow-x: auto;
 }
 
 .index:hover {
-    background: var(--lavender);
-    border-top: 10px solid var(--orange);
-    border-left: 10px solid var(--orange);
+    background: var(--orange);
+    border-top: 10px solid var(--red);
+    border-left: 10px solid var(--red);
     border-right: 10px solid var(--yellow);
     border-bottom: 10px solid var(--yellow);
 
-    .quote {
+    h1 {
         border-bottom: 3px dotted var(--yellow);
+        border-top: 3px dotted var(--orange);
     }
 }
 
@@ -81,5 +83,9 @@ button {
 button:hover {
     border: 5px solid var(--blue);
     background: var(--blue);
-    color: var(--orange);
+    color: var(--yellow);
+}
+
+img {
+    width: 90vw;
 }
