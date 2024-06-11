@@ -19,6 +19,9 @@ function OpenWin(win) {
         case 'itch.io':
             window.open('https://kiefciman.itch.io/')
             break
+        case 'wot':
+            window.open('https://www.worldoftrucks.com/en/profile/9036821')
+            break
         case 'nekoboard':
             window.open('https://github.com/Kiefciman/Nekoboard')
             break
