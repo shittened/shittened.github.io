@@ -1,5 +1,14 @@
 function OpenPage(page) {
-   window.location.replace(page + '.html')
+    switch(page) {
+        case 'myanimestats':
+            window.location.replace('https://kiefciman.github.io/myanimestats')
+            break
+        case 'mymangastats':
+            window.location.replace('https://kiefciman.github.io/mymangastats/')
+            break
+        default:
+            window.location.replace(page + '.html')
+    }
 }
 
 function OpenWin(win) {
@@ -41,7 +50,32 @@ function OpenWin(win) {
             window.open('https://github.com/Kiefciman/keqinging')
             break
         case 'nekofying':
-            window.open('https://kiefciman.github.io/Nekofying/')
+            window.open('https://kiefciman.github.io/Nekofying')
+            break
+        case 'stallman':
+            window.open('https://stallman.org/')
+            break
+        case 'gnu':
+            window.open('https://www.gnu.org/')
+            break
+        case 'suckless':
+            window.open('https://suckless.org/')
+            break
+        case 'bugswriter':
+            window.open('https://www.bugswriter.com/')
+            break
+        case 'random':
+            window.open('https://wiby.me/surprise/')
+            break
+        case 'omfgdogs':
+            window.open('https://www.omfgdogs.com/')
+            break
+        case 'potatothedevil':
+            window.open('https://potatothedevil.github.io/hel')
             break
     }
+}
+
+function OpenBlog(blog) {
+    window.location.replace('blogs/' + blog + '.html')
 }

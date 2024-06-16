@@ -89,3 +89,9 @@ button:hover {
 img {
     width: 90vw;
 }
+
+p {
+    margin: 10px;
+    padding: 0px;
+    font-size: 18px;
+}
