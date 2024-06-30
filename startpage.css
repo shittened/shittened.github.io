@@ -52,20 +52,8 @@ li {
     background: var(--yellow);
     border: 10px solid var(--yellow);
     width: 100%;
-    overflow-x: auto;
-}
-
-.index:hover {
-    background: var(--orange);
-    border-top: 10px solid var(--red);
-    border-left: 10px solid var(--red);
-    border-right: 10px solid var(--yellow);
-    border-bottom: 10px solid var(--yellow);
-
-    h1 {
-        border-bottom: 3px dotted var(--yellow);
-        border-top: 3px dotted var(--orange);
-    }
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 button {
@@ -81,9 +69,8 @@ button {
 }
 
 button:hover {
-    border: 5px solid var(--blue);
-    background: var(--blue);
-    color: var(--yellow);
+    border: 5px solid var(--lavender);
+    background: var(--lavender);
 }
 
 img {
@@ -94,4 +81,19 @@ p {
     margin: 10px;
     padding: 0px;
     font-size: 18px;
+}
+
+#myanimestats {
+    width: 100vw;
+    height: 80vh;
+}
+
+#mymangastats {
+    width: 100vw;
+    height: 80vh;
+}
+
+#chattig {
+    width: 90vw;
+    height: 80vh;
 }

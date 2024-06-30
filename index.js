@@ -1,14 +1,5 @@
 function OpenPage(page) {
-    switch(page) {
-        case 'myanimestats':
-            window.location.replace('https://kiefciman.github.io/myanimestats')
-            break
-        case 'mymangastats':
-            window.location.replace('https://kiefciman.github.io/mymangastats/')
-            break
-        default:
-            window.location.replace(page + '.html')
-    }
+    window.location.replace(page + '.html')
 }
 
 function OpenWin(win) {
