@@ -26,10 +26,10 @@ function OpenWin(win) {
             window.open('https://github.com/Kiefciman/Nekoboard')
             break
         case 'myanimestats':
-            window.open('https://github.com/Kiefciman/myanimestats')
+            window.open('https://kiefciman.github.io/myanimestats')
             break
         case 'mymangastats':
-            window.open('https://github.com/Kiefciman/mymangastats')
+            window.open('https://kiefciman.github.io/mymangastats')
             break
         case 'dwm-kiefciman':
             window.open('https://github.com/Kiefciman/dwm-kiefciman')
