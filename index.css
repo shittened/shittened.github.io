@@ -199,8 +199,8 @@ a:hover {
 
 .myanimestats, .mymangastats {
     margin-top: 15px;
-    margin-left: 20px;
-    width: 750px;
+    margin-left: 18px;
+    width: 752px;
     height: 520px;
     border-left: 8px solid var(--shadow);
     border-right: 8px solid var(--shadow);
@@ -210,8 +210,8 @@ a:hover {
 
 .nekofying {
     margin-top: 15px;
-    margin-left: 20px;
-    width: 750px;
+    margin-left: 18px;
+    width: 752px;
     height: 450px;
     border-left: 8px solid var(--shadow);
     border-right: 8px solid var(--shadow);
