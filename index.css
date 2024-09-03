@@ -11,7 +11,7 @@
     --shadow: #1e1e2eb3;
 }
 
-@font-face {font-family: S; src: url('assets/Sauce Code Pro Nerd Font Complete.ttf');}
+@font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
 
 body {
     background: var(--orange);
@@ -31,7 +31,7 @@ body {
     background: var(--blue);
     border: 8px solid var(--shadow);
     width: 800px;
-    height: 3200px;
+    height: 3800px;
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
@@ -284,3 +284,30 @@ a:hover {
 
 .games::-webkit-scrollbar-thumb {
     background: var(--blue);
+}
+
+.buttons {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 720px;
+    flex-wrap: wrap;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 8px solid var(--shadow);
+    border-right: 8px solid var(--shadow);
+    border-bottom: 8px solid var(--white);
+    border-top: 8px solid var(--white);
+    background: var(--lavender);
+}
+
+.buttons img {
+    margin: 5px;
+    width: 88px;
+    height: 31px;
+}
+
+.buttons a {
+    margin: 0px;
+}
