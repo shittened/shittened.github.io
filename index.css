@@ -178,29 +178,29 @@ a:hover {
 }
 
 .row-2 {
-    height: 330px;
+    display: flex;
+    height: 325px;
 }
 
-.chattig {
-    width: 455px;
-    height: 395px;
+.row-3 {
+    display: flex;
 }
 
 .girlslasttour {
     width: 300px;
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 .eren {
-    margin-left: 18px;
+    margin-left: 15px;
     margin-top: 15px;
     width: 768px;
 }
 
 .myanimestats, .mymangastats {
     margin-top: 15px;
-    margin-left: 18px;
-    width: 752px;
+    margin-left: 15px;
+    width: 754px;
     height: 520px;
     border-left: 8px solid var(--shadow);
     border-right: 8px solid var(--shadow);
@@ -208,13 +208,79 @@ a:hover {
     border-top: 8px solid var(--white);
 }
 
-.nekofying {
+.bear {
     margin-top: 15px;
-    margin-left: 18px;
-    width: 752px;
+    margin-left: 15px;
+    width: 754px;
     height: 450px;
     border-left: 8px solid var(--shadow);
     border-right: 8px solid var(--shadow);
     border-bottom: 8px solid var(--white);
     border-top: 8px solid var(--white);
 }
+
+.projects {
+    border-left: 8px solid var(--shadow);
+    border-right: 8px solid var(--shadow);
+    border-bottom: 8px solid var(--white);
+    border-top: 8px solid var(--white);
+    background: var(--lavender);
+}
+
+.projects {
+    height: 295px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    height: 295px;
+    width: 300px;
+    overflow-y: auto;
+    border-left: 8px solid var(--shadow);
+    border-right: 8px solid var(--shadow);
+    border-bottom: 8px solid var(--white);
+    border-top: 8px solid var(--white);
+    background: var(--lavender);
+    text-align: start;
+
+}
+
+.games img {
+    width: 200px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.chattig {
+    margin-left: 15px;
+    width: 450px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--orange);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+.games::-webkit-scrollbar {
+    width: 8px;
+}
+
+.games::-webkit-scrollbar-track {
+    background: var(--lavender);
+}
+
+.games::-webkit-scrollbar-thumb {
+    background: var(--blue);
