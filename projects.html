@@ -1,0 +1,52 @@
+<!doctotype html>
+<html>
+    <head>
+		<link rel = "stylesheet" type = "text/css" href = "index.css">
+    </head>
+    <body>
+        <div class = "titlebar">
+            <h3>[ shitten ~/projects ]</h3>
+            <button type = "button" id = "close">x</button>
+        </div>
+        <div class = "content">
+            <ul>
+                <li><button type "button" onclick = "OpenLink('https://github.com/shittened/Nekoboard')">Nekoboard</button></li>
+                <li><button type "button" onclick = "OpenLink('https://github.com/shittened/myanimestats')">Myanimestats</button></li>
+                <li><button type "button" onclick = "OpenLink('https://github.com/shittened/mymangastats')">Mymangastats</button></li>
+                <li><button type "button" onclick = "OpenLink('https://github.com/shittened/Dotfiles')">Dotfiles</button></li>
+                <li><button type "button" onclick = "OpenLink('https://github.com/shittened/dwm-kiefciman')">dwm-kiefciman</button></li>
+                <li><button type "button" onclick = "OpenLink('https://github.com/shittened/nekofetch')">Nekofetch</button></li>
+                <li><button type = "button" onclick = "Open('main')">< Back</button></li>
+            </ul>
+            <pre class = "ascii">
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢰⣄⠀⠙⠻⣿⠿⠟⠛⠛⠛⠿⠿⠿⣿⡿⠋⠁⠀⣠⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠅⢸⣿⣷⠀⠀⠀⠁⠒⢂⣀⣱⣿⡿⠋⠀⠀⠀⢠⣾⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⡽⡿⠋⠀⠀⠀⠀⣰⡿⡛⣿⣿⣿⠀⣀⠀⠀⠀⢹⣿⠃⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⣿⠄⣴⠖⢤⡾⠫⠞⠀⣿⣿⡇⠀⠜⢿⡄⠀⣾⡏⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠀⠀⡀⠀⢁⠾⠁⢠⠎⣠⡤⠀⣰⢿⡿⠁⣠⠈⠊⠉⢴⠘⠇⠀⠀⠀⢆⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⢠⡿⠀⠀⣠⣤⣧⣼⣿⣧⣴⣿⣾⣶⣾⣿⣷⣤⣈⣤⡑⠀⠿⠏⡀⠀⠀⠀⠙⠿⢿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣷⣦⣤⡄⠤⢄⢸⡇⠀⡸⢟⣋⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⣷⡐⠖⠀⠑⢀⠀⠀⣀⣀⣴⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⡰⡀⣼⠇⢁⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠁⠀⠀⠀⠈⠁⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡟⠠⢡⡇⣿⠀⣾⣿⡿⠋⠉⣉⠛⢿⣿⣿⣿⣿⣿⡟⠉⠉⠙⢿⣿⣷⡀⠀⢠⠰⣆⠊⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡏⢙⡿⡇⡀⢾⠀⣿⠀⣿⠃⣴⢟⣉⣉⠀⢾⣿⣿⣿⣿⣿⠆⠛⠏⠻⢦⡈⠻⣇⢸⢸⠀⢹⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡄⢟⣂⣇⢈⠘⠀⢻⠸⠃⢸⠃⠚⠹⠍⡑⢸⣿⣿⣿⣿⣿⠀⢫⣭⠙⠈⢳⠀⣿⢸⢸⠀⢸⡇⣿⣿⡟⠉⠉⡉⠉⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡸⡆⡁⢸⡀⠀⢸⣆⠓⠦⠴⢗⣾⣯⣽⣛⣻⣿⡈⠢⠶⠖⢁⣿⠀⠘⠸⠐⢢⠸⢹⣿⣿⣿⣦⡀⠁⢰⣿⣿
+⣿⣿⣿⡿⢀⡛⢿⣿⣿⡇⠃⡛⠜⣧⠻⣿⣿⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣶⣤⣽⣶⣿⣾⠃⢠⢠⠸⠀⣸⣿⣿⣿⣿⣿⣷⣿⣿⣿
+⣿⣿⣿⣇⢀⣠⣾⣿⣿⡿⠀⠈⠢⢹⢀⢹⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⠃⡀⣜⠠⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⡰⡀⢀⣤⠈⠁⠙⣿⣿⣿⣿⣿⣿⡇⠈⣿⣿⣿⣿⣿⣿⡿⠃⠈⠀⡏⠠⢄⢠⠙⣿⣿⣿⣿⡏⢵⡘⣿⣿
+⣿⣿⣿⣿⣿⣿⡯⢡⡎⠀⣵⠁⠸⡏⡆⡀⠀⠀⠙⠻⢿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠁⠀⠀⡀⢸⣿⠀⠀⠀⡆⠈⢿⣿⣿⣷⣭⣴⣿⣿
+⣿⣿⣿⣿⣿⡿⠁⡿⠀⣸⠋⡇⣄⠃⣧⢹⣿⣶⣶⣦⣤⠀⠀⠉⠉⠁⠀⢠⣤⣤⣶⣾⣿⡇⣿⢻⠀⣄⠀⡇⣧⠈⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡇⢰⢃⣇⠏⠀⠇⢿⡈⣿⡞⠟⠛⠛⠿⠿⢸⣶⣤⣤⣤⣤⠚⠛⠙⢿⣿⡿⢰⡿⠀⡆⠿⣆⢣⣿⢰⢸⣿⣿⣿⣿⢙⢿
+⣿⠿⠿⣿⣿⡇⡏⢨⣶⣶⣒⣛⣂⠁⢻⡇⢦⣀⠀⢠⣄⣚⠻⠟⡛⣛⣉⣀⣀⠀⢀⣉⡁⣿⡇⢀⢠⣤⣤⣭⣉⡛⠇⣿⣿⣿⣿⣿⣾
+⣡⡎⣰⣿⣿⣷⣇⢄⠻⣿⣿⠿⢟⣧⠈⣷⠸⣿⣿⣷⣤⣒⢭⣭⣭⣭⡭⢅⣶⣿⣿⡟⢸⣿⠰⠈⣠⣲⣤⣾⠟⡡⠁⢿⣿⣿⡟⣿⣿
+⣿⡄⣿⣿⣿⣿⡇⠈⠂⢹⣶⣿⡿⢡⡀⠹⡀⢻⣿⣿⣿⡿⠿⣛⣭⣵⣾⣿⣿⣿⣿⠁⣿⡏⠠⠁⠝⣿⣿⣿⡎⠁⠀⢿⣿⡏⣴⣿⣿
+⣿⢇⣼⣿⣿⡇⡇⠀⠀⢾⣿⣿⡇⣣⢿⡀⡇⡜⣿⣯⣻⠿⠿⠿⣿⣿⣿⣿⣿⣿⠇⢠⡟⠀⢰⣼⣧⣈⣿⡿⡰⠀⠀⢸⣿⡇⣿⣿⣿
+⣟⣿⣿⣿⣿⡇⠇⣇⠀⠈⠙⢿⣿⠏⣾⣧⠀⡇⣿⣿⣿⣿⣿⣿⣽⣿⣿⡿⣿⡿⠘⠨⢠⣮⠀⠋⣿⠿⢛⡕⠁⣠⠀⢻⣿⡇⣸⣿⣿
+⣾⣿⣿⣿⣿⡇⠀⠃⣴⡄⠀⠘⠏⣸⣿⣿⢰⣷⢹⣿⣿⣿⣿⣿⣻⣿⣿⣦⣀⠀⣀⡤⣸⣿⡇⠰⢣⠀⠁⡀⠀⡿⠀⣿⣿⡇⣿⣿⣿
+⣿⣿⣿⣿⣿⡇⡇⣰⣿⣷⡄⠈⠂⢿⣿⠟⣸⡇⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢹⡇⣿⣿⣿⠐⢁⣀⣼⣧⠘⡇⣇⣿⡿⢸⣿⣿⣿
+            </pre>
+        </div>
+    </body>
+    <script src = "index.js"></script>
+</html>
+
