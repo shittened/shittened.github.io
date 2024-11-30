@@ -100,7 +100,7 @@ li button {
     padding-left: 10px;
     background: var(--dark);
     color: var(--white);
-    width: 800px;
+    width: 100%;
 }
 
 li button:hover {
@@ -123,6 +123,10 @@ li button:hover {
 .content {
     display: flex;
     flex-direction: row;
+}
+
+.content > ul {
+    width: 50%;
 }
 
 .chattig {
