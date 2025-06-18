@@ -14,7 +14,8 @@
 @font-face {font-family: S; src: url('Sauce Code Pro Nerd Font Complete.ttf');}
 
 body {
-    background: var(--dark);
+    background: rgb(0, 0, 0, 50%);
+    backdrop-filter: blur(5px) saturate(200%);
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -90,7 +91,7 @@ li button {
     text-align: start;
     padding: 5px;
     padding-left: 10px;
-    background: var(--dark);
+    background: rgb(0, 0, 0, 0%);
     color: var(--white);
     width: 100%;
 }
@@ -167,8 +168,8 @@ li button:hover {
 
 .nick {
     text-align: center;
-    border: 4px solid var(--orange);
-    border-radius: 20px;
+    color: var(--dark);
+    background: var(--orange);
 }
 
 .animes, .mangas {
