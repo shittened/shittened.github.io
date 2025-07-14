@@ -178,7 +178,6 @@ li button:hover {
     border: 4px solid var(--orange);
     width: calc(100vw - 50px);
     overflow-x: auto;
-    margin-bottom: 10px;
 }
 
 .anime, .manga {
@@ -188,21 +187,31 @@ li button:hover {
     margin-right: 10px;
     margin-top: 10px;
     border: 4px solid var(--orange);
+    border-radius: 20px;
+    text-align: center;
+    text-wrap:wrap;
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+.anime:hover, .manga:hover {
+    background: var(--orange);
+    color: var(--dark);
+
+    .anime-img, .manga-img {
+        width: 180px;
+        height: 260px;
+        margin: 20px;
+        border-radius: 30px;
+    }
 }
 
 .anime-img, .manga-img {
     height: 300px;
     width: 220px;
+    border-radius: 15px;
 }
 
-.anime > a, .manga > a {
-    margin-left: 10px;
-}
-
-.anime > a:hover, .manga > a:hover {
-    text-decoration: underline;
-    color: var(--orange);
-}
 h1 {
     font-size: 25px;
 }

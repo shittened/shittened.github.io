@@ -27,8 +27,8 @@ var speed = 2
 
 for (let i = 0; i < a_s.length; i++) {
     let a = a_s[i]
-    let top_a = i * 100  + 100
-    let left_a = i * 100  + 100
+    let top_a = i * 100 + 100
+    let left_a = i * 100 + 100
     let direction_x = 1
     let direction_y = 1
     if (i == 1 || i == 5) {
@@ -50,5 +50,5 @@ for (let i = 0; i < a_s.length; i++) {
         a.style.left = left_a + 'px'
     }
     
-    setInterval(move, 50)
+    setInterval(move, 100)
 }
