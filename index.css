@@ -221,3 +221,7 @@ h1 {
     margin-top: 5px;
     border: 4px solid var(--orange);
 }
+
+#quote {
+    margin-left: 10px;
+}
