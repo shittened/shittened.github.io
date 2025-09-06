@@ -134,7 +134,7 @@ function ProcessInput() {
         case 'open':
             if(arg[1] != null) {
                 if(arg[1] in current_directory) {
-                    if(current_directory_str = 'blogs/') {
+                    if(current_directory_str == 'blogs/') {
                         output = '<div class = "output>' + current_directory[arg[1]] + '</div>'
                     }
                     else {
