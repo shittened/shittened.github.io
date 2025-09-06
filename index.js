@@ -1,3 +1,5 @@
+import {Blogs} from './blogs.js'
+
 const input_form = document.querySelector('.input-form')
 const input_field = document.querySelector('#input')
 const content = document.querySelector('.content')
@@ -28,7 +30,7 @@ const filesystem = {
         //    'pong': '',
         //},
         'blogs/': {
-            'farting.txt': '',
+            'farting': Blogs()['farting'],
         },
         'anime/': {
             'watching/': {},
@@ -58,11 +60,11 @@ input_field.select()
 input_form.addEventListener(
     'submit', function(e) {
         e.preventDefault()
-        await ProcessInput()
+        ProcessInput()
     }
 )
 
-async function ProcessInput() {
+function ProcessInput() {
     const input = input_field.value
     const arg = input.split(' ')
     let output = ''
@@ -132,15 +134,8 @@ async function ProcessInput() {
         case 'open':
             if(arg[1] != null) {
                 if(arg[1] in current_directory) {
-                    if(arg[1].split('.')[1] == 'txt') {
-                        output = '<div class = "output>'
-                        await fetch('blogs/' + arg[1].replace('.txt', '.html'))
-                            .then(response => response.text())
-                            .then(text => {
-                                console.log(text)
-                                output += text
-                            })
-                        output += '</div>'
+                    if(current_directory_str = 'blogs/') {
+                        output = '<div class = "output>' + current_directory[arg[1]] + '</div>'
                     }
                     else {
                         output = '<div class = "output">' + arg[1] + ' opened</div>'
