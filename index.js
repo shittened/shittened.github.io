@@ -1,74 +1,178 @@
-const quote_div = document.querySelector('#quote')
+const input_form = document.querySelector('.input-form')
+const input_field = document.querySelector('#input')
+const content = document.querySelector('.content')
+const path = document.querySelector('.path')
 
-function Open(page) {
-    window.open(page + '.html', '_self')
+const commands = [
+    'ls - list files/directories',
+    'cd - change directory',
+    'open - open file',
+    'clear - clear screen',
+    'help - show help',
+]
+const filesystem = {
+    '~/': {
+        //'./socials': {
+        //    'github',
+        //    'lemmy',
+        //    'mastodon',
+        //    'itch.io',
+        //    'substack',
+        //},
+        'games/': {
+            'cowwy-jump': 'https://kiefciman.itch.io/cowwy-jump-alpha',
+            'froggy-lunch': 'https://kiefciman.itch.io/froggy-lunch',
+            'mine': 'https://kiefciman.itch.io/mine',
+        },
+        //'arcade/': {
+        //    'pong': '',
+        //},
+        'blogs/': {
+            'farting.txt': '',
+        },
+        'anime/': {
+            'watching/': {},
+            'complete/': {},
+        },
+        'manga/': {
+            'reading/': {},
+            'complete/': {},
+        },
+        'links/': {
+            'stallman.org': 'https://stallman.org/',
+            'omfgdogs': 'https://www.omfgdogs.com/',
+        }
+    }
 }
+let current_directory = filesystem['~/']
+let current_directory_str = '~/'
+let parent_directory = filesystem['~/']
+let parent_directory_str = '~/'
+let prompt = Prompt()
 
-function OpenLink(link) {
-    window.open(link, '_vblank')
-}
+path.innerHTML = prompt
 
-function Close() {
-    fetch("https://api.ipify.org?format=json")
-        .then(response => response.json())
-        .then(data => {
-            alert('There is no escape.\nYour iPee adress is ' + data.ip + '.\nBetter start running.')
-        })
-}
+input_field.focus()
+input_field.select()
 
-async function CatFact() {
-    const response = await fetch('https://meowfacts.herokuapp.com/')
-    const data = await response.json()
-    return data.data[0]
-}
+input_form.addEventListener(
+    'submit', function(e) {
+        e.preventDefault()
+        ProcessInput()
+    }
+)
 
-async function ChuckNorrisQuote() {
-    const response = await fetch('https://api.chucknorris.io/jokes/random')
-    const data = await response.json()
-    return data.value
-}
+function ProcessInput() {
+    const input = input_field.value
+    const arg = input.split(' ')
+    let output = ''
 
-async function UselessFact() {
-    const response = await fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
-    const data = await response.json()
-    return data.text
-}
+    content.innerHTML += '<div class = "output">' + prompt + input + '</div>'
 
-async function TechyQuote() {
-    const response = await fetch('https://techy-api.vercel.app/api/json')
-    const data = await response.json()
-    return data.message
-}
-
-async function BreakingBadQuotes() {
-    const response = await fetch('https://api.breakingbadquotes.xyz/v1/quotes')
-    const data = await response.json()
-    return data[0].quote + ' - ' + data[0].author + ' (Breaking Bad)'
-}
-
-async function SetQuote(num) {
-    let quote
-    switch(num) {
-        case 1:
-            quote = await CatFact()
+    switch(arg[0]) {
+        case 'clear':
+            content.innerHTML = '<div class = "output"></div>'
             break
-        case 2:
-            quote = await ChuckNorrisQuote()
+
+        case 'help':
+            output = '<div class = "output">'
+            commands.forEach(command => {
+                output += command + '<br>'
+            })
+            output += '</div>'
+            content.innerHTML += output
             break
-        case 3:
-            quote = await UselessFact()
+
+        case 'ls':
+            output = '<div class = "output">'
+            if(arg[1] != null) {
+                arg[1] += '/'
+                if(arg[1] in current_directory) {
+                    for(var dir in current_directory[arg[1]]) {
+                        output += dir + '<br>'
+                    }
+                }
+                else {
+                    output += 'Directory not found'
+                }
+            }
+            else {
+                for(var dir in current_directory) {
+                    output += dir + '<br>'
+                }
+            }
+            output += '</div>'
+            content.innerHTML += output
             break
-        case 4:
-            quote = await TechyQuote()
+
+        case 'cd':
+            if(arg[1] != null) {
+                if(arg[1] == '..') {
+                    current_directory = parent_directory
+                    current_directory_str = parent_directory_str
+                    parent_directory = filesystem['~/']
+                    parent_directory_str = '~/'
+                }
+                else {
+                    arg[1] += '/'
+                    parent_directory = current_directory
+                    parent_directory_str = current_directory_str
+                    current_directory = filesystem['~/'][arg[1]]
+                    current_directory_str = arg[1]
+                }
+            }
+            else {
+                current_directory = filesystem['~/']
+                current_directory_str = '~/'
+                parent_directory = filesystem['~/']
+                parent_directory_str = '~/'
+            }
             break
+
+        case 'open':
+            if(arg[1] != null) {
+                if(arg[1] in current_directory) {
+                    if(arg[1].split('.')[1] == 'txt') {
+                        output = '<div class = "output>'
+                        fetch('./blogs/' + arg[1])
+                            .then(response => response.text())
+                            .then(text => output += text)
+                        output += '</div>'
+                    }
+                    else {
+                        output = '<div class = "output">' + arg[1] + ' opened</div>'
+                        window.open(current_directory[arg[1]], '_blank').focus()
+                    }
+                }
+                else {
+                    output = '<div class = "output">' + arg[1] + ':file not found</div>'
+                }
+            }
+            content.innerHTML += output
+            break
+
         default:
-            quote = await BreakingBadQuotes()
+            content.innerHTML += '<div class = "output">Command not found</div>'
             break
     }
-    quote_div.innerHTML = quote
-    console.log(quote)
+    input_form.reset()
+    input_form.scrollIntoView({behavior: 'instant'})
+    prompt = Prompt()
+    path.innerHTML = prompt
 }
 
-let rand_num = Math.floor(Math.random() * (5 - 1) + 1)
-console.log(rand_num)
-SetQuote(rand_num)
+function Prompt() {
+    let pwd = ''
+    if(current_directory_str == '~/') {
+        pwd = current_directory_str
+    }
+    else {
+        if(parent_directory_str == '~/') {
+            pwd = parent_directory_str + current_directory_str
+        }
+        else {
+            pwd = '~/' + parent_directory_str + current_directory_str
+        }
+    }
+    return 'shitten ' + pwd + ' > '
+}
