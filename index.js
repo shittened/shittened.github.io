@@ -151,6 +151,7 @@ function ProcessInput() {
                     output = '<div class = "output">' + arg[1] + ':file not found</div>'
                 }
             }
+            console.log(output)
             content.innerHTML += output
             break
 
