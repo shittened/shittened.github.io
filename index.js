@@ -58,7 +58,7 @@ input_field.select()
 input_form.addEventListener(
     'submit', function(e) {
         e.preventDefault()
-        ProcessInput()
+        await ProcessInput()
     }
 )
 
