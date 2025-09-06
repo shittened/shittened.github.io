@@ -134,9 +134,12 @@ function ProcessInput() {
                 if(arg[1] in current_directory) {
                     if(arg[1].split('.')[1] == 'txt') {
                         output = '<div class = "output>'
-                        fetch('blogs/' + arg[1])
+                        fetch('blogs/' + arg[1].replace('.txt', '.html'))
                             .then(response => response.text())
-                            .then(text => output += text)
+                            .then(text => {
+                                console.log(text)
+                                output += text
+                            })
                         output += '</div>'
                     }
                     else {
