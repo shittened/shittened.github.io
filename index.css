@@ -101,3 +101,15 @@ textarea:focus, input:focus{
 .path {
     margin-right: 10px;
 }
+
+.nekofetch {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -12px;
+    margin-top: 5px;
+}
+
+.ascii {
+    margin-top: -5px;
+    margin-right: 10px;
+}
