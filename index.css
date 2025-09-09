@@ -105,8 +105,7 @@ textarea:focus, input:focus{
 .nekofetch {
     display: flex;
     flex-direction: row;
-    margin-bottom: -12px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .ascii {
