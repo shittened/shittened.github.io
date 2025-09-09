@@ -3,10 +3,13 @@ import * as commands from './commands.js'
 import * as filesystem from './filesystem.js'
 import * as prompt from './prompt.js'
 
-const input_form = document.querySelector('.input-form')
-const input_field = document.querySelector('#input')
+const input_form = document.querySelector('#main-form')
+const input_form_secondary = document.querySelector('#secondary-form')
+const input_field = document.querySelector('#input-main')
+const input_field_secondary = document.querySelector('#input-secondary')
 const content = document.querySelector('.content')
-const path = document.querySelector('.path')
+const prompt_main = document.querySelector('#prompt-main')
+const prompt_secondary = document.querySelector('#prompt-secondary')
 const file_system = await filesystem.Filesystem(blogs)
 
 var current_directory = file_system['~/']
@@ -15,7 +18,8 @@ var parent_directory = file_system['~/']
 var parent_directory_str = '~/'
 var pwd = prompt.Prompt(current_directory_str, parent_directory_str)
 
-path.innerHTML = pwd
+prompt_main.innerHTML = pwd
+input_form_secondary.display = 'none'
 
 input_field.focus()
 input_field.select()
@@ -83,6 +87,10 @@ async function ProcessInput() {
             commands.Nekofetch(content)
             break
 
+        case 'trivia':
+            commands.Trivia(arg, content, input_form, input_form_secondary, input_field, input_field_secondary, prompt_secondary)
+            break
+
         default:
             content.innerHTML += '<div class = "output">Command not found</div>'
             break
@@ -90,5 +98,5 @@ async function ProcessInput() {
     input_form.reset()
     input_form.scrollIntoView({behavior: 'instant'})
     pwd = prompt.Prompt(current_directory_str, parent_directory_str)
-    path.innerHTML = pwd
+    prompt_main.innerHTML = pwd
 }
