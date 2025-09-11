@@ -9,6 +9,7 @@ export function Help(content) {
         'about - credits',
         'pwd - print current directory',
         'whoami - print username',
+        'su - switch user',
         'nekofetch - system info',
         'cat-fact - fact',
         'chuck-norris - fact',
@@ -83,10 +84,15 @@ export function CD(arg, content, current_directory, current_directory_str, paren
         }
         else {
             arg[1] += '/'
-            parent_directory = current_directory
-            parent_directory_str = current_directory_str
-            current_directory = filesystem['~/'][arg[1]]
-            current_directory_str = arg[1]
+            if(arg[1] in current_directory) {
+                parent_directory = current_directory
+                parent_directory_str = current_directory_str
+                current_directory = filesystem['~/'][arg[1]]
+                current_directory_str = arg[1]
+            }
+            else {
+                content.innerHTML += '<div class = "output">Directory not found</div>'
+            }
         }
     }
     else {
@@ -186,6 +192,17 @@ export function PWD(content, current_directory_str, parent_directory_str) {
     content.innerHTML += '<div class = "output">' + pwd + '</div>'
 }
 
-export function WhoAmI(content) {
-    content.innerHTML += '<div class = "output">shitten</div>'
+export function WhoAmI(content, username) {
+    content.innerHTML += '<div class = "output">' + username + '</div>'
+}
+
+export function SwitchUser(content, arg, username) {
+    if(arg[1] != null) {
+        document.cookie = 'username=' + arg[1]
+        return arg[1]
+    }
+    else {
+        content.innerHTML += '<div class = "output">Specify username</div>'
+        return 0
+    }
 }

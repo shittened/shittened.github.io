@@ -3,6 +3,7 @@ import * as commands from './commands.js'
 import * as filesystem from './filesystem.js'
 import * as prompt from './prompt.js'
 import * as ani_ascii from '/commands/ani-ascii.js'
+import * as user from './user.js'
 
 const input_form = document.querySelector('#main-form')
 const input_form_secondary = document.querySelector('#secondary-form')
@@ -17,7 +18,8 @@ var current_directory = file_system['~/']
 var current_directory_str = '~/'
 var parent_directory = file_system['~/']
 var parent_directory_str = '~/'
-var pwd = prompt.Prompt(current_directory_str, parent_directory_str)
+var username = user.GetUser()
+var pwd = prompt.Prompt(current_directory_str, parent_directory_str, username)
 
 ani_ascii.AniAscii(content, [])
 
@@ -43,14 +45,22 @@ async function ProcessInput() {
 
     const process_command = commands.Commands(arg, content, current_directory, current_directory_str,
         parent_directory, parent_directory_str, file_system, input_form, input_form_secondary, input_field,
-        input_field_secondary, prompt_secondary)
+        input_field_secondary, prompt_secondary, username)
 
     if(process_command != 0) {
-        [current_directory, current_directory_str, parent_directory, parent_directory_str] = process_command
+        switch(process_command[0]) {
+            case 'cd':
+                [current_directory, current_directory_str, parent_directory,
+                    parent_directory_str] = process_command[1]
+                break
+            case 'su':
+                username = process_command[1]
+                break
+        }
     }
 
     input_form.reset()
     input_form.scrollIntoView({behavior: 'instant'})
-    pwd = prompt.Prompt(current_directory_str, parent_directory_str)
+    pwd = prompt.Prompt(current_directory_str, parent_directory_str, username)
     prompt_main.innerHTML = pwd
 }

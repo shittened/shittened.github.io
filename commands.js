@@ -8,7 +8,7 @@ import * as ani_ascii from './commands/ani-ascii.js'
 
 export function Commands(arg, content, current_directory, current_directory_str, parent_directory,
     parent_directory_str, file_system, input_form, input_form_secondary, input_field,
-    input_field_secondary, prompt_secondary) {
+    input_field_secondary, prompt_secondary, username) {
 
     switch(arg[0]) {
         case 'clear':
@@ -24,8 +24,8 @@ export function Commands(arg, content, current_directory, current_directory_str,
             break
 
         case 'cd':
-            return core.CD(arg, content, current_directory, current_directory_str, parent_directory,
-                parent_directory_str, file_system)
+            return ['cd', core.CD(arg, content, current_directory, current_directory_str, parent_directory,
+                parent_directory_str, file_system)]
             break
 
         case 'open':
@@ -45,7 +45,14 @@ export function Commands(arg, content, current_directory, current_directory_str,
             break
 
         case 'whoami':
-            core.WhoAmI(content)
+            core.WhoAmI(content, username)
+            break
+
+        case 'su':
+            const switch_user = core.SwitchUser(content, arg, username)
+            if(switch_user != 0) {
+                return ['su', switch_user]
+            }
             break
 
         case 'cat-fact':
@@ -73,7 +80,8 @@ export function Commands(arg, content, current_directory, current_directory_str,
             break
 
         case 'trivia':
-            trivia.Trivia(arg, content, input_form, input_form_secondary, input_field, input_field_secondary, prompt_secondary)
+            trivia.Trivia(arg, content, input_form, input_form_secondary, input_field,
+                input_field_secondary, prompt_secondary)
             break
 
         case 'about':
