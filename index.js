@@ -43,7 +43,7 @@ async function ProcessInput() {
 
     content.innerHTML += '<div class = "output">' + pwd + input + '</div>'
 
-    const process_command = commands.Commands(arg, content, current_directory, current_directory_str,
+    const process_command = await commands.Commands(arg, content, current_directory, current_directory_str,
         parent_directory, parent_directory_str, file_system, input_form, input_form_secondary, input_field,
         input_field_secondary, prompt_secondary, username)
 

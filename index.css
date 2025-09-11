@@ -89,7 +89,6 @@ textarea:focus, input:focus{
     overflow-y: auto;
     width: 100%;
     height: 100%;
-    margin-left: 10px;
 }
 
 .output {
@@ -128,4 +127,9 @@ p {
     margin: 0px;
     margin-bottom: 10px;
     padding-bottom: 10px;
+}
+
+.content {
+    width: 100%;
+    margin: 0px;
 }

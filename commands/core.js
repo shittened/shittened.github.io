@@ -19,6 +19,7 @@ export function Help(content) {
         'duck - spinning duck',
         'trivia - quiz',
         'ani-ascii - anime ascii',
+        'wttr - weather'
     ]
     let output = '<div class = "output">'
 

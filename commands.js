@@ -5,8 +5,9 @@ import * as trivia from './commands/trivia.js'
 import * as duck from './commands/duck.js'
 import * as about from './commands/about.js'
 import * as ani_ascii from './commands/ani-ascii.js'
+import * as wttr from './commands/wttr.js'
 
-export function Commands(arg, content, current_directory, current_directory_str, parent_directory,
+export async function Commands(arg, content, current_directory, current_directory_str, parent_directory,
     parent_directory_str, file_system, input_form, input_form_secondary, input_field,
     input_field_secondary, prompt_secondary, username) {
 
@@ -56,19 +57,19 @@ export function Commands(arg, content, current_directory, current_directory_str,
             break
 
         case 'cat-fact':
-            fq.CatFact(content)
+            await fq.CatFact(content)
             break
 
         case 'chuck-norris':
-            fq.ChuckNorrisQuote(content)
+            await fq.ChuckNorrisQuote(content)
             break
 
         case 'useless-fact':
-            fq.UselessFact(content)
+            await fq.UselessFact(content)
             break
 
         case 'breaking-bad':
-            fq.BreakingBadQuotes(content)
+            await fq.BreakingBadQuotes(content)
             break
 
         case 'duck':
@@ -90,6 +91,10 @@ export function Commands(arg, content, current_directory, current_directory_str,
 
         case 'ani-ascii':
             ani_ascii.AniAscii(content, arg)
+            break
+
+        case 'wttr':
+            await wttr.Wttr(content, arg)
             break
 
         default:

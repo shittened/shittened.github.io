@@ -51,7 +51,6 @@ async function Mastodon() {
             }
         })
 
-        console.log(text)
         blog += text
 
         if(item.includes('media:content')) {
