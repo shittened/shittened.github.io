@@ -9,6 +9,7 @@ export async function Blogs() {
     })
 
     for(let i = 0; i < blogs.length; i++) {
+        //blogs[i] = ' - ' + blogs[i]
         blogs[i] += '<br>'
         if(i < blogs.length -1) {
             blogs[i] += '<br>'
@@ -22,18 +23,53 @@ async function Mastodon() {
     let mastodon = []
     const rss = await fetch('https://mastodon.social/@kiefciman.rss')
     const xml = await rss.text()
-    const parser = new DOMParser()
-    const parsed = parser.parseFromString(xml, 'text/xml')
-    const items = parsed.getElementsByTagName('description')
+    let items = xml.split('<item>')
+    
+    items.shift()
 
-    for(let i = 0; i < items.length; i++) {
-        let post = items[i].childNodes[0].nodeValue
-        post = String(post).split('</p>')[0].split('<p>')[1]
+    items.forEach(item => {
+        item = item.split('<description>')[1]
 
-        if(String(post).substring(0, 1) != '<' && post != null) {
-            mastodon.push(post)
+        let blog = ''
+        let text = item.split('</description>')[0]
+        const decode_patterns = [['&lt;br /&gt;', '\n'], ['&amp;gt;', '>']]
+        
+        text = text.split('&lt;p&gt;')[1]
+        text = text.split('&lt;/p&gt')[0]
+
+        if(text.includes('&lt;a href="https://mastodon.social/tags/')) {
+            text = text.split('&lt;a href="https://mastodon.social/tags/')
+            for(let i = 1; i < text.length; i++) {
+                let line = text[i].split('" class=')
+
+                line[1] = line[1].split('/a&gt;')[1]
+                text[i] = line.join('')
+            }
+            text = text.join(' ')
         }
-    }
+
+        decode_patterns.forEach(pattern => {
+            while(text.includes(pattern[0])) {
+                text = text.replace(pattern[0], pattern[1])
+            }
+        })
+
+        console.log(text)
+        blog += text
+
+        if(item.includes('media:content')) {
+            let medias = item.split('<media:content url="')
+
+            medias.shift()
+            medias.forEach(media => {
+                media = media.split('" type=')[0]
+                blog += '<br><img src = "' + media + '" class = "image-medium">'
+            })
+
+        }
+
+        mastodon.push(blog)
+    })
 
     return mastodon.reverse()
 }

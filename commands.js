@@ -37,6 +37,7 @@ export function Help(content) {
         'techy-quote - quote',
         'breaking-bad - quote',
         'duck - spinning duck',
+        'trivia - quiz',
     ]
     let output = '<div class = "output">'
 

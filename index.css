@@ -119,5 +119,10 @@ textarea:focus, input:focus{
     gap: 30px;
 }
 
-#secondary-form {
+.image-medium {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: var(--blue) 0px 0px 10px 5px;
+    margin: 20px;
+    z-index: -1;
 }
