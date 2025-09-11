@@ -8,12 +8,9 @@ export async function Blogs() {
         blogs.push(post)
     })
 
-    for(let i = 0; i < blogs.length; i++) {
-        //blogs[i] = ' - ' + blogs[i]
-        blogs[i] += '<br>'
-        if(i < blogs.length -1) {
-            blogs[i] += '<br>'
-        }
+    for(let i = 0; i < blogs.length - 1; i++) {
+        blogs[i] = '<p>' + blogs[i]
+        blogs[i] += '</p>'
     }
 
     return blogs
@@ -32,7 +29,7 @@ async function Mastodon() {
 
         let blog = ''
         let text = item.split('</description>')[0]
-        const decode_patterns = [['&lt;br /&gt;', '\n'], ['&amp;gt;', '>']]
+        const decode_patterns = [['&lt;br /&gt;', '<br>'], ['&amp;gt;', '>']]
         
         text = text.split('&lt;p&gt;')[1]
         text = text.split('&lt;/p&gt')[0]
