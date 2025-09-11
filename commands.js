@@ -40,6 +40,14 @@ export function Commands(arg, content, current_directory, current_directory_str,
             core.FuLpOs(content)
             break
 
+        case 'pwd':
+            core.PWD(content, current_directory_str, parent_directory_str)
+            break
+
+        case 'whoami':
+            core.WhoAmI(content)
+            break
+
         case 'cat-fact':
             fq.CatFact(content)
             break

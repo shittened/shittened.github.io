@@ -7,6 +7,8 @@ export function Help(content) {
         'clear - clear screen',
         'help - show help',
         'about - credits',
+        'pwd - print current directory',
+        'whoami - print username',
         'nekofetch - system info',
         'cat-fact - fact',
         'chuck-norris - fact',
@@ -15,6 +17,7 @@ export function Help(content) {
         'breaking-bad - quote',
         'duck - spinning duck',
         'trivia - quiz',
+        'ani-ascii - anime ascii',
     ]
     let output = '<div class = "output">'
 
@@ -165,4 +168,24 @@ export function Cat(arg, content, current_directory) {
 
 export function Clear(content) {
     content.innerHTML = '<div class = "output"></div>'
+}
+
+export function PWD(content, current_directory_str, parent_directory_str) {
+    let pwd = ''
+    if(current_directory_str == '~/') {
+        pwd = current_directory_str
+    }
+    else {
+        if(parent_directory_str == '~/') {
+            pwd = parent_directory_str + current_directory_str
+        }
+        else {
+            pwd = '~/' + parent_directory_str + current_directory_str
+        }
+    }
+    content.innerHTML += '<div class = "output">' + pwd + '</div>'
+}
+
+export function WhoAmI(content) {
+    content.innerHTML += '<div class = "output">shitten</div>'
 }
