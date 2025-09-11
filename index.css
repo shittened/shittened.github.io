@@ -97,27 +97,22 @@ textarea:focus, input:focus{
     margin-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
+    overflow-wrap: break-word;
 }
 
 .prompt {
     margin-right: 10px;
 }
 
-.nekofetch {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-}
-
 .ascii {
     margin-top: -5px;
-    margin-right: 10px;
 }
 
 .hsplit {
     display: flex;
     flex-direction: row;
     gap: 30px;
+    margin-top: 10px;
 }
 
 .image-medium {
