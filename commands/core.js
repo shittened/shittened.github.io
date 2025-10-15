@@ -17,9 +17,9 @@ export function Help(content) {
         'techy-quote - quote',
         'breaking-bad - quote',
         'duck - spinning duck',
-        'trivia - quiz',
         'ani-ascii - anime ascii',
-        'wttr - weather'
+        'wttr - weather',
+        'pixelcode - draw pixelart using js',
     ]
     let output = '<div class = "output">'
 
@@ -104,22 +104,6 @@ export function CD(arg, content, current_directory, current_directory_str, paren
     }
 
     return [current_directory, current_directory_str, parent_directory, parent_directory_str]
-}
-
-export function FuLpOs(content) {
-    const D3tH = [
-        '32x100x105x103x32x104x97x114x100x101x114',
-        'x32x107x105x110x100x32x111x102x32x116x104x105x110x103x', 
-        '119x101x114x101x32x101x120x112x101x99x116x105x110x103x32x116x104x97x116',
-        '104x101x114x101x32x105x102x32x117x32x',
-        '32x115x111x109x101x116x104x105x110x103x32x108x105x107x101x32x116x104x97x116x32x',
-        '100x101x32x97x32x115x117x105x99x105x100x101x32x110x111x116x101x32x111x114x',
-        '105x115x32x116x111x111x32x101x97x115x121x32x116x111x32x104x105x',
-        '32x97x32x115x116x97x108x107x101x114x46x32x84x104x105x115x32x',
-        '05x115x32x116x104x101x110x32x103x103x32x117x114x',
-        '73x102x32x117x114x32x114x101x97x100x105x110x103x32x116x104x1'
-    ]
-    content.innerHTML += '<div class = "output">' + D3tH.reverse().join('') + '</div>'
 }
 
 export function Open(arg, content, current_directory) {

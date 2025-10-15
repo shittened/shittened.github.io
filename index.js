@@ -6,12 +6,10 @@ import * as ani_ascii from '/commands/ani-ascii.js'
 import * as user from './user.js'
 
 const input_form = document.querySelector('#main-form')
-const input_form_secondary = document.querySelector('#secondary-form')
 const input_field = document.querySelector('#input-main')
 const input_field_secondary = document.querySelector('#input-secondary')
 const content = document.querySelector('.content')
 const prompt_main = document.querySelector('#prompt-main')
-const prompt_secondary = document.querySelector('#prompt-secondary')
 const file_system = await filesystem.Filesystem(blogs)
 
 var current_directory = file_system['~/']
@@ -20,11 +18,11 @@ var parent_directory = file_system['~/']
 var parent_directory_str = '~/'
 var username = user.GetUser()
 var pwd = prompt.Prompt(current_directory_str, parent_directory_str, username)
+var pixelcode_id = 0
 
 ani_ascii.AniAscii(content, [])
 
 prompt_main.innerHTML = pwd
-input_form_secondary.display = 'none'
 
 input_field.focus()
 input_field.select()
@@ -37,15 +35,18 @@ input_form.addEventListener(
 )
 
 async function ProcessInput() {
+    const prev_pixelcode = document.querySelector('#pixelcode' + Math.floor(pixelcode_id - 1))
+    if(prev_pixelcode) {
+        prev_pixelcode.innerHTML = ''
+    }
+
     const input = input_field.value
     const arg = input.split(' ')
     let output = ''
 
     content.innerHTML += '<div class = "output">' + pwd + input + '</div>'
 
-    const process_command = await commands.Commands(arg, content, current_directory, current_directory_str,
-        parent_directory, parent_directory_str, file_system, input_form, input_form_secondary, input_field,
-        input_field_secondary, prompt_secondary, username)
+    const process_command = await commands.Commands(arg, content, current_directory, current_directory_str,parent_directory, parent_directory_str, file_system, input_form, input_field, username, pixelcode_id)
 
     if(process_command != 0) {
         switch(process_command[0]) {
@@ -55,6 +56,9 @@ async function ProcessInput() {
                 break
             case 'su':
                 username = process_command[1]
+                break
+            case 'pixelcode_id':
+                pixelcode_id = process_command[1]
                 break
         }
     }

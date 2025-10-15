@@ -1,5 +1,5 @@
 export function GetUser() {
-    let username = 'shittem'
+    let username = 'shitten'
     let cookie_username = document.cookie.split('username=')[1]
 
     if(cookie_username != null) {

@@ -1,16 +1,14 @@
 import * as core from './commands/core.js'
 import * as fq from './commands/facts-quotes.js'
 import * as nekofetch from './commands/nekofetch.js'
-import * as trivia from './commands/trivia.js'
 import * as duck from './commands/duck.js'
 import * as about from './commands/about.js'
 import * as ani_ascii from './commands/ani-ascii.js'
 import * as wttr from './commands/wttr.js'
+import * as pixelcode from './commands/pixelcode.js'
 
 export async function Commands(arg, content, current_directory, current_directory_str, parent_directory,
-    parent_directory_str, file_system, input_form, input_form_secondary, input_field,
-    input_field_secondary, prompt_secondary, username) {
-
+    parent_directory_str, file_system, input_form, input_field, username, id) {
     switch(arg[0]) {
         case 'clear':
             core.Clear(content)
@@ -80,11 +78,6 @@ export async function Commands(arg, content, current_directory, current_director
             nekofetch.Nekofetch(content)
             break
 
-        case 'trivia':
-            trivia.Trivia(arg, content, input_form, input_form_secondary, input_field,
-                input_field_secondary, prompt_secondary)
-            break
-
         case 'about':
             about.About(content)
             break
@@ -95,6 +88,11 @@ export async function Commands(arg, content, current_directory, current_director
 
         case 'wttr':
             await wttr.Wttr(content, arg)
+            break
+
+        case 'pixelcode':
+            const pixelcode_id = pixelcode.PixelCode(content, arg, id)
+            return ['pixelcode_id', pixelcode_id]
             break
 
         default:

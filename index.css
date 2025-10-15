@@ -72,6 +72,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
+    background: var(--black);
 }
 
 /* Handle */
@@ -132,4 +133,17 @@ p {
 .content {
     width: 100%;
     margin: 0px;
+}
+
+.pixelart {
+    border: 4px solid var(--blue);
+}
+
+.pixelartcodebox {
+    border: 4px solid var(--blue);
+    border-left: 0px;
+    background: var(--black);
+    color: var(--blue);
+    font-weight: bold;
+    resize: none;
 }
