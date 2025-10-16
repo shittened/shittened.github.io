@@ -6,9 +6,11 @@ import * as about from './commands/about.js'
 import * as ani_ascii from './commands/ani-ascii.js'
 import * as wttr from './commands/wttr.js'
 import * as pixelcode from './commands/pixelcode.js'
+import * as anime from './commands/anime.js'
+import * as manga from './commands/manga.js'
 
 export async function Commands(arg, content, current_directory, current_directory_str, parent_directory,
-    parent_directory_str, file_system, input_form, input_field, username, id) {
+    parent_directory_str, file_system, input_form, input_field, username, id, db) {
     switch(arg[0]) {
         case 'clear':
             core.Clear(content)
@@ -28,7 +30,7 @@ export async function Commands(arg, content, current_directory, current_director
             break
 
         case 'open':
-            core.Open(arg, content, current_directory)
+            core.Open(arg, content, current_directory, current_directory_str, anime.Anime(db.animes), manga.Manga(db.mangas))
             break
 
         case 'cat':

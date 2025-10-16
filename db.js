@@ -1,0 +1,30 @@
+export const animes = [
+    ['Madoka Magica', true, ],
+    ['Naruto Shippuuden', true, 'https://cdn.myanimelist.net/images/anime/1565/111305.jpg'],
+    ['Frieren', true, 'https://cdn.myanimelist.net/images/anime/1015/138006.jpg'],
+    ['Girl\'s last tour', false, 'https://cdn.myanimelist.net/images/anime/1924/98915l.jpg'], 
+    ['Bochhi the rock', true, ],
+    ['Kuma kuma kuma bear', true, ],
+    ['One punch man', true, 'https://cdn.myanimelist.net/images/anime/1247/122044.jpg'],
+    ['Jojo', true, 'https://cdn.myanimelist.net/images/anime/11/55267.jpg'],
+    ['Made in abyss', true, 'https://cdn.myanimelist.net/images/anime/6/86733.jpg'],
+    ['Accel World', true, ],
+    ['Shikanoko Nokonoko Koshitantan', true, 'https://i1.sndcdn.com/artworks-KbUtURuc3WIzrDoS-YlI2MA-t500x500.jpg'],
+    ['KonoSuba: God\'s Blessing on This Wonderful World!', true, 'https://cdn.myanimelist.net/images/anime/1758/141268.jpg'],
+    ['Seraph of the End', false, 'https://cdn.myanimelist.net/images/anime/5/73474.jpg'],
+    ['My Neighbor Totoro', false, 'https://cdn.myanimelist.net/images/anime/1110/147278.jpg'],
+    ['The Promised Neverland', false, 'https://cdn.myanimelist.net/images/anime/1830/118780.jpg'],
+    ['Tokyo Ghoul', false, 'https://cdn.myanimelist.net/images/anime/1498/134443.jpg'],
+    ['Attack on Titan', false, 'https://cdn.myanimelist.net/images/anime/10/47347.jpg'],
+    ['Naruto', false, 'https://cdn.myanimelist.net/images/anime/1141/142503.jpg'],
+    ['Chainsaw Man', false, 'https://cdn.myanimelist.net/images/anime/1806/126216.jpg'],
+    ['Animal Crossing: The Movie', false, 'https://cdn.myanimelist.net/images/anime/3/13151.jpg'],
+    ['16bit Sensation: Another Layer', false, 'https://cdn.myanimelist.net/images/anime/1588/138395.jpg'],
+    ['86', false, 'https://cdn.myanimelist.net/images/anime/1987/117507.jpg'],
+]
+
+export const mangas = [
+    ['Monster', true, 'https://cdn.myanimelist.net/images/manga/3/258224.jpg'],
+    ['20th Century Boys', false, 'https://cdn.myanimelist.net/images/manga/5/260006.jpg'],
+    ['The Summit of the Gods', false, 'https://cdn.myanimelist.net/images/manga/2/166336.jpg'],
+]

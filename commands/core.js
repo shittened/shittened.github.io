@@ -106,14 +106,36 @@ export function CD(arg, content, current_directory, current_directory_str, paren
     return [current_directory, current_directory_str, parent_directory, parent_directory_str]
 }
 
-export function Open(arg, content, current_directory) {
+export function Open(arg, content, current_directory, current_directory_str, animes, mangas) {
     let output = '<div class = "output">'
 
     if(arg[1] != null) {
         if(arg[1] in current_directory) {
             if(arg[1].split('.')[1] != 'txt') {
-                output += arg[1] + ' opened'
-                window.open(current_directory[arg[1]], '_blank').focus()
+                switch(current_directory_str) {
+                    case 'anime/':
+                        if(arg[1] == 'watching') {
+                            output += animes[0]
+                        }
+                        else {
+                            output += animes[1]
+                        }
+                        break
+
+                    case 'manga/':
+                        if(arg[1] == 'reading') {
+                            output += mangas[0]
+                        }
+                        else {
+                            output += mangas[1]
+                        }
+                        break
+
+                    default:
+                        output += arg[1] + ' opened'
+                        window.open(current_directory[arg[1]], '_blank').focus()
+                        break
+                }
             }
             else {
                 output += 'Use command "cat" to read a text file'
@@ -138,7 +160,7 @@ export function Cat(arg, content, current_directory) {
         if(arg[1] in current_directory) {
             if(arg[1].split('.')[1] == 'txt') {
                 current_directory[arg[1]].forEach(text => {
-                    output += text
+                    output += text + '<br>'
                 })
             }
             else {

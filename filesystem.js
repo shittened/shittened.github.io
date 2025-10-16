@@ -1,4 +1,4 @@
-export async function Filesystem(blogs) {
+export function Filesystem(blogs, db, anime, manga) {
     const filesystem = {
         '~/': {
             //'./socials': {
@@ -17,18 +17,22 @@ export async function Filesystem(blogs) {
             //    'pong': '',
             //},
             'anime/': {
-                'watching/': {},
-                'complete/': {},
+                'watching.txt': anime.AnimeTXT(true, db.animes),
+                'watching': {},
+                'completed.txt': anime.AnimeTXT(false, db.animes),
+                'completed': {},
             },
             'manga/': {
-                'reading/': {},
-                'complete/': {},
+                'reading.txt': manga.MangaTXT(true, db.mangas),
+                'reading': {},
+                'completed.txt': manga.MangaTXT(false, db.mangas),
+                'completed': {},
             },
             'links/': {
                 'stallman.org': 'https://stallman.org/',
                 'omfgdogs': 'https://www.omfgdogs.com/',
             },
-            'blogs.txt': await blogs.Blogs(),
+            'blogs.txt': blogs.Blogs(),
         }
     }
 
